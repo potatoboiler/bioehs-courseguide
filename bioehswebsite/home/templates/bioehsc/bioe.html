@@ -1,0 +1,137 @@
+{% extends "header.html" %}
+{% block content %}
+
+<body>
+  {% load staticfiles %}
+  <link href="{% static 'css/bioehsc.css' %}" rel="stylesheet">
+  <main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="particles-js" ></div>
+    <div class="jumbotron-header">
+      <div class="container" id="jumbotron-text">
+        <h1 class="display-3">BioEHSC&trade;</h1>
+        <h5>BioEngineering High School Competition</h5>
+      </div>
+    </div>
+
+
+    <div class="wrapper">
+      <!-- Sidebar Holder -->
+      <nav id="sidebar">
+
+        <ul class="list-unstyled components">
+          <li>
+            <a href="/bioehsc/" class="effect-underline">Overview</a>
+          </li>
+          <li>
+            <a href="/bioehsc/bioe/" class="effect-underline">What is Bioengineering?</a>
+          </li>
+          <li>
+            <a href="/bioehsc/requirements/" class="effect-underline">Requirements</a>
+          </li>
+          <li>
+            <a href="/bioehsc/timeline/" class="effect-underline">Timeline</a>
+          </li>
+          <li>
+            <a href="/bioehsc/faq/" class="effect-underline">FAQ</a>
+          </li>
+          <li>
+            <a href="/bioehsc/registration/" class="effect-underline">Registration</a>
+          </li>
+          <li>
+            <a href="/bioehsc/archives/" class="effect-underline">Past Competitions</a>
+          </li>
+          <li>
+            <a href="/bioehsc/volunteer/" class="effect-underline">Get Involved</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Page Content Holder -->
+      <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="bioehsc-navbar">
+          <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="navbar-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+          </div>
+        </nav>
+
+        <h2>What is Bioengineering?</h2>
+        <p>Bioengineering is defined loosely as synergizing multiple academic fields skills to solve
+          problems in biology or human health and medicine. For this reason, many bioengineers are also
+          experts in different STEM fields, such as bioinformatics, biology, chemistry, chemical engineering,
+          computer science, chemical engineering, electrical engineering, materials science and engineering,
+          mechanical engineering, and physics.
+        </p>
+
+        <p>For this competition, we focus on the two subfields of bioengineering: biological engineering and medical engineering.
+        </p>
+        <ul>
+          <li><strong>Biological engineering</strong> is the application of concepts and methods in biology to
+            solve problems related to the life sciences or the application thereof, using methodologies from
+            engineering, such as analysis, design, and optimization of solutions. This discipline is engaged in
+            the engineering of novel biochemical pathways in biological systems and, in some cases, the creation
+            of new organisms. These new pathways and organisms are designed for the production of a variety of
+            useful products, ranging from proteins to molecular precursors. Examples of biological engineering
+            applications include bacteria engineered to produce chemicals, biofuels, drug synthesis, probiotics,
+            alternative/plant-based meat, and genetically modified organisms (GMOs).
+          </li>
+          <br>
+          <li><strong>Medical engineering</strong> is the application of engineering principles and design concepts
+            to medicine and biology for health care and clinical purposes. This discipline seeks to close the gap
+            between engineering and medicine, by combining the methodologies of engineering with the biomedical
+            sciences in order to advance health care treatment via creating new techniques and technologies for
+            diagnosis, monitoring, and therapy. Examples of medical engineering include heart stents, pacemakers,
+            neural prosthetics, rapid diagnostic devices, and 3D printed tissues.</li>
+        </ul>
+        <p>
+          For more in-depth views on what bioengineering encompasses, visit our
+          <a href={{outreach_blog}} class="links" target="_blank">bioengineering blog</a> or the
+          <a href="https://twitter.com/BioEHS" class="links" target="_blank">BioEHS Twitter</a> for summarized
+          posts of key and recent bioengineering scientific research!
+        </p>
+
+          <div class="line"></div>
+
+          <h3>About the BioE Program</h3>
+          <p>For students interested in attending UC Berkeley as a bioengineering student, below are some statistics
+            about the bioengineering undergraduate program:</p>
+          <ul>
+            <li><strong>With respect to ranking, </strong> Bioengineering at Berkeley is
+              <a href="https://www.usnews.com/best-graduate-schools/top-engineering-schools/biomedical-rankings" class="links" target="_blank">
+                ranked fourth in the nation</a> for its undergraduate and graduate bioengineering/biomedical engineering programs.</li>
+            <br>
+            <li><strong>At UC Berkeley, </strong> the bioengineering major is one of the most competitive majors
+              within the College of Engineering in terms of admissions.</li>
+            <br>
+            <li><strong>The number of applications to the BioE major</strong> at UC Berkeley rises constantly every
+              year as a result of increasing interest in this new and interdisciplinary field!</li>
+          </ul>
+          <p>According to bioengineering staff, rising applicant numbers
+            were matched by higher applicant quality. If you are interested in
+            applying to the program, you can email BioEHSC&trade; competition chairs for more
+            information at <a class="links"  href="mailto:bioehsc@bioehs.berkeley.edu">bioehsc@bioehs.berkeley.edu</a>
+            or visit the department website at <a href="http://bioeng.berkeley.edu/" class="links" target="_blank">http://bioeng.berkeley.edu/</a>.
+          </p>
+
+          </div>
+        </div>
+
+      </main>
+      <script type="text/javascript">
+      $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+          $('#sidebar').toggleClass('active');
+          $(this).toggleClass('active');
+        });
+      });
+      </script>
+    </body>
+    {% endblock %}

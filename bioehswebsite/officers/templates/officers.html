@@ -1,0 +1,66 @@
+{% extends "header.html" %}
+{% block content %}
+<body>
+  <main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="particles-js" ></div>
+    <div class="jumbotron-header">
+      <div class="container" id="jumbotron-text">
+        <h1 class="display-3">Officers</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <form method="post">
+            {% csrf_token %}
+            {{ form }}
+            <span class="form-actions">
+              <button class="btn btn-primary" type="submit">Go</button>
+            </span>
+          </form>
+
+          <br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h1>{{ semester }}</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <h3>Executive Officers</h3>
+          {{execDetail|safe}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <h3>Non-Executive Officers</h3>
+          {{nonExecDetail|safe}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <h3>Assistant Officers</h3>
+          {{assistantOfficersDetail|safe}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <h3>Advisors</h3>
+          {{advisorsDetail|safe}}
+        </div>
+      </div>
+    </div> <!-- /container -->
+  </main>
+</body>
+{% endblock %}

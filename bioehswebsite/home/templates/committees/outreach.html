@@ -1,0 +1,143 @@
+{% extends "header.html" %}
+{% block content %}
+<body>
+  <main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="particles-js" ></div>
+    <div class="jumbotron-header">
+      <div class="container" id="jumbotron-text">
+        <h1 class="display-3">Outreach Committee</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <h2>Description</h2>
+          <p>The mission of Outreach Committee is to connect Berkeley Bioengineering with the greater community. We help committee members reach their full potential for effective scientific communication. Outreach Committee conducts targeted workshops dedicated to developing these skills in a personalized, supportive environment, showing committee members how to connect with any audience in a professional, timely yet impactful way. 
+          <p>Through events like school visits, members have the opportunity to apply their learned skills: they firsthand empower and inspire future engineers by teaching them scientific concepts. In the process, Outreach Committee represents BioEHS, and Berkeley Engineering with every school visit.
+          </p>
+
+          <h2>For Applicants</h2>
+            <p>
+                Hello and welcome to the Outreach Committee!! The Outreach Committee focuses on giving back to the community and bringing your passions for bioengineering to audiences that may not otherwise be familiar with our field. Over the course of the semester, we will learn how to communicate to various audiences including high school and community college students. We will also learn about different outlets to volunteer and better the community around us through engineering and non-engineering channels. As a committee, we will host workshops on effective presentation, communication, and writing skills that will give you and other candidates the tools necessary to bring your exciting ideas to larger audiences. Don’t worry if presenting is not your forte! At times you may feel out of your comfort zone, but overall it will be a welcoming and accepting environment for everyone. By the end of the semester, I hope you will feel well equipped to light the way for future Bioengineers and feel as though you have given back to our community in an impactful way.
+            </p>
+        </div>
+      </div>
+      <hr/>
+      <div class="row">
+        <div class="col-md-2">
+          <br>
+          <!-- Trigger the Modal -->
+          <figure class="figure">
+          <img class="figure-img img-fluid rounded" id="myImg" src='{{bioe_day_flyer.url}}' alt="BioE Day Flyer" style="width:90%;max-width:200px">
+          <figcaption class="figure-caption"><p>Click to enlarge.</p></figcaption>
+        </figure>
+          <!-- The Modal -->
+
+          <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+          </div>
+        </div>
+        <div class="col-md-10">
+          <br>
+          <h2>BioE Day</h2>
+          <p>BioE Day is an event hosted by Bioengineering Honor Society on UC Berkeley campus for high school scholars, especially those of underrepresented communities. Our goal is to present various interesting areas of bioengineering to help students answer the question "What is Bioengineering?"</p>
+          <p>There will be several fun bioengineering-related hands-on activities, tours of on-campus laboratories, and demos to capture the students' interest, and excite them for participating in BioEHSC™ or BioE in general.</p>
+          <p>The Third Annual Bioengineering Day will take place on November 16th, from 10 AM - 3:30 PM at Soda Hall. Lunch will be provided. Once we hit capacity, a waitlist will be applied, so make sure to  <a href={{bioe_day_rsvp_form}} target="_blank">RSVP!</a></p>
+
+          <h3 style='text-align: center;'>Quotes from Attendees</h3>
+
+          <div class="container">
+              <div id="carouselContent" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner" role="listbox">
+                      <div class="carousel-item active text-center p-5 dark-carousel">
+                           <h5>"I learned how Bioengineering is the perfect synthesis between the medical field and engineering field, and also to have confidence in my passions and abilities."</h5>
+                           <p>Jeremiah Partido</p>
+                      </div>
+                      <div class="carousel-item text-center p-5 dark-carousel">
+                           <h5>"Learned the humane part of engineering and importance of research and self-confidence. Thank you!"</h5>
+                           <p>Clara Roux</p>
+                      </div>
+                      <div class="carousel-item text-center p-5 dark-carousel">
+                           <h5>"You can start a career coming from anywhere, as long as you stick to your passion."</h5>
+                           <p>Stella Stewart</p>
+                      </div>
+                      <div class="carousel-item text-center p-5 dark-carousel">
+                           <h5>"I learned how glaucoma functions and how it can be treated/cured."</h5>
+                           <p>Peter Le</p>
+                      </div>
+                      <div class="carousel-item text-center p-5 dark-carousel">
+                           <h5>"Bioengineering is much more than Bio and Engineering."</h5>
+                           <p>Carly A.</p>
+                      </div>
+                      <div class="carousel-item text-center p-5 dark-carousel">
+                           <h5>"I learned that bioengineering includes various different subjects such as creating artificial limbs. It’s also a career that can help many people in need."</h5>
+                           <p>Michelle Mao</p>
+                      </div>
+                      <div class="carousel-item text-center p-5 dark-carousel">
+                           <h5>"I learned about how cool and important research can be, I learned about micro-fluidics, I learned about college and UC Berkeley, and I learned about how BioE connects to aerospace and robotics engineering."</h5>
+                           <p>Arunaabha Yadavalli</p>
+                      </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                  </a>
+              </div>
+          </div>
+
+
+
+
+          <br>
+        </div>
+      </div>
+      <hr/>
+      <div class="row">
+        <div class="col-md-12">
+          <h2><a href={{outreach_blog}} target="_blank">BioEHS Blog</a></h2>
+          <p>Our workshops assist members on how to efficiently break down scientific concepts and write about them. As a product, this blog is intended to expose those without a scientific background or formal training to current papers in the field of Bioengineering, and all articles are written by members of the Outreach Committee.</p>
+          <br>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+<script>
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+{% endblock %}

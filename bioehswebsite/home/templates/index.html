@@ -1,0 +1,93 @@
+{% extends "header.html" %}
+{% block content %}
+
+  <body>
+    <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+    <main role="main">
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div id="particles-js" ></div>
+      <div class="jumbotron">
+        <div class="container" id="jumbotron-text">
+          <h1 class="display-3">Bioengineering Honor Society</h1>
+          <h3>University of California, Berkeley</h3>
+          <p>The Bioengineering Honor Society (BioEHS) honors undergraduate students from the department of Bioengineering who have maintained excellent scholarship during their time at UC Berkeley. In addition to holding high academic standards, BioEHS emphasizes striving for exceptional character and all prospective and current members participate in volunteer, professional, and social events that benefit themselves and the community.</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-8">
+            <h2>Purpose</h2>
+            <p>The purpose of The Bioengineering Honor Society shall be to confer recognition upon students of Bioengineering who have demonstrated exceptional academic talent and abilities in their field, to encourage advancement and quality of Bioengineering education and to serve as a representative on behalf of members in presenting their needs and objectives to the faculty and professional community. </p>
+            <h4><a class="display-5" href="https://docs.google.com/document/d/128hynYuoDcyebJkTh7-hyMTzCPVr_NIyCMC2QJEfHFU/edit#heading=h.21coc93ntare" target="_blank">— BioEHS Constitution — </a></h4>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  {% load staticfiles %}
+                  <img class="d-block w-100" src="{% static 'images/index/f2022candidates.JPG' %}" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  {% load staticfiles %}
+                  <img class="d-block w-100" src="{% static 'images/index/f2022officers.JPG' %}" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  {% load staticfiles %}
+                  <img class="d-block w-100" src="{% static 'images/index/f2022officers&candidates.JPG' %}" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                  {% load staticfiles %}
+                  <img class="d-block w-100" src="{% static 'images/index/f2022candidate_retreat.JPG' %}" alt="Fourth slide">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h4>Take a look at what's happening.</h4>
+            <div class="fb-page"
+                data-tabs="timeline"
+                data-href="https://www.facebook.com/bioehs"
+                data-width="700">
+              </div>
+             <!--  <a class="twitter-timeline" href="https://twitter.com/BioEHS?ref_src=twsrc%5Etfw">Take a look at what's happening.</a> <script async src="https://platform.twitter.com/widgets.js"></script> -->
+          </div>
+        </div>
+        <div class="row">
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <br></br>
+            <h5>UC Berkeley Student Group Disclaimer</h5>
+            <p>We are a student group acting independently of the University of California. We take full responsibility for our organization and this web site.</p>
+          </div>
+        </div>
+        <br></br>
+
+      </div> <!-- /container -->
+
+    </main>
+
+
+  </body>
+{% endblock %}

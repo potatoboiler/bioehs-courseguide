@@ -1,0 +1,71 @@
+{% extends "header.html" %}
+{% block content %}
+<body>
+  <main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="particles-js" ></div>
+    <div class="jumbotron-header">
+      <div class="container" id="jumbotron-text">
+        <h1 class="display-3">BioE98 -- Breaking Down BioE</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-12">
+        	<br>
+        	<br>
+          <h3><strong>We do not hold our DeCal in the Spring, but come back next Fall to apply!</strong></h3>
+          <h5><strong><a href="https://docs.google.com/forms/d/e/1FAIpQLSc7ZkhiyvkVk6waV2l1URmBU8aynHzdTrwL7awW36KtKsG1BQ/viewform?embedded=true" target="_blank">Interest Form</a></strong></h5>
+          <!--- <h5><a href="http://tinyurl.com/BDBFa20"><strong>Application</strong></a></h5> --->
+          <p>For more information, feel free to contact us at <a href="mailto:bdb@bioehs.berkeley.edu">bdb@bioehs.berkeley.edu</a>.</p>
+        </div>
+        <br>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <h1><strong>Overview</strong></h1>
+          <h3><strong>Purpose</strong></h3>
+          <p>This course is designed to serve students who:
+            <ol type="1">
+              <li>Intend on majoring in bioengineering and want to explore concentrations</li>
+              <li>Are undecided in their major choice and would like an introduction to the engineering disciplines through a biological lens</li>
+              <li>Have declared a major other than bioengineering and would like to explore applications of their major to solve problems in biology and medicine.</li>
+            </ol>
+          By exploring each application of Bioengineering, we help you discover the BioE concentration/engineering major that best simulates your interests. We enhance course and career planning by helping you select electives, and develop your repertoire of professional and academic skills. By providing access to advice and guidance from our course instructor, Professor Dorian Liepmann, and BioEHS alumni/upperclassmen, we relate the classes in your intended discipline to your goals and passions.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h3><strong>Description</strong></h3>
+          <div class="row">
+            <div class="col-md-6">
+            	<p>Bioengineering is a highly interdisciplinary field that applies various fields of engineering to biological systems. Historically, Bioengineering was first merged with Chemical Engineering to understand the structure and function of molecules including DNA, RNA, and proteins. Since then, various science and engineering disciplines have applied their principles to solve problems in biology such as of Electrical Engineering and Computer Science, Materials Science, Mechanical Engineering, and more. Breaking Down BioE will explore bioengineering through the lens of these various engineering disciplines applied to biological systems through speaker series, group discussions, journal clubs, and hands-on projects. These activities include building your own smart garden through principles of Electrical Engineering, touring laboratories within academia and industry, and learning to build your resume with professional development workshops.</p>
+            </div>
+            <div class="col-md-6">
+              {% load staticfiles %}
+              <img src="{% static 'images/decal/decalpic.png' %}" alt="pic" style="width:480px;height:360px;"><br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+              <div class="col-md-12">
+                <h3><strong>Here's what previous students had to say about BDB!</strong></h3>
+                <p><em>&ldquo;I learned so much through the diverse speaker set and journal club project through industry advice, the do's and don'ts of research, and overall presentation skills on detailed scientific topics which is something I'd never done before.&rdquo;</em></p>
+                <p><em>&ldquo;When I was looking for research, the people I met through this DeCal helped me through the process. Now, I&rsquo;m extremely thankful to learn from a great grad student, and I&rsquo;m excited to work on a project that I am truly passionate about.&rdquo;</em></p>
+                <p><em>&ldquo;As a freshman, it was difficult to find my place in the BioE Community, overwhelmed by the number of resources, people ,extracurricular opportunities, but having a tight-knit community through the DeCal was helpful in making the first semester transition easier.&rdquo;</em></p>
+                <p><em>&ldquo;I'm so glad I took a chance on this DeCal because the sheer amount of love, effort, and support that went into creating it truly translated to success and growth for the students.&rdquo;</em></p>
+              </div>
+            </div>
+
+    </div>
+
+
+  </main>
+</body>
+{% endblock %}

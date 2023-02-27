@@ -1,0 +1,155 @@
+{% extends "header.html" %}
+{% block content %}
+<body>
+  <main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="particles-js" ></div>
+    <div class="jumbotron-header">
+      <div class="container" id="jumbotron-text">
+        <h1 class="display-3">Projects Committee</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <h2>Description</h2>
+          <p>The goal of the Projects Committee is to work hands-on on bioengineering related projects, and for members to use/develop skills such as Arduino, Autodesk Fusion 360, 3D printing, programming, circuit design and more. The aim for each semester is to complete projects that can be used for demonstration purposes by the Outreach/BioEHSC Committees, to spread more awareness about bioengineering related technologies to high school students. For example, the Projects Committee has worked on an EKG device that could monitor the activity of the heart, a catapult that could aim and fire based on EMG signals in the arm, a virtual keyboard controlled by EMG sensors, an assistive mini-robot capable of following a human face, and a 3D-printed hand capable of moving in sync with a human hand. Several of these projects were used by Outreach Committee in their high school visits, and have also been showcased at BioE Day and BioEHSC.
+          </p>
+
+          <h2>For Committee Members</h2>
+          <p>
+            The Projects Committee will be centered on organizing hands-on bioengineering-related workshops and projects that provide skill development opportunities for candidates and general members. The committee will emphasize biomedical projects that involve various leading tools such as Arduino/Raspberry Pi, AlphaFold, Autodesk Fusion 360, and more. This semester, the completed projects will be showcased and be used for demonstration purposes at BioEHSCTM, introducing bioengineering-related technologies to high school students. In the past, the committee has built an EKG and an EMG-powered catapult triggered by arm muscle flexion, and has hosted workshops on wet lab techniques, circuit design, and protein structure prediction. The Projects Committee offers a range of opportunities for members to get involved, from understanding foundational design principles to learning how software version control (Git) works. We welcome members of all skill levels, and no technical background is required.
+          </p>
+        </div>
+      </div>
+      <hr/>
+
+      <div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 style="text-align: center;">Gallery</h2>
+        <br>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow" style="overflow: scroll;">
+          <div class="github-card card-img-top" data-github="cal-bioehs"  data-theme="default"></div>
+          <div class="card-body">
+            <p class="card-text">Link to all Projects Committee projects (in progress).</p>
+          </div>
+        </div>
+        <div class="card mb-4 box-shadow" style="overflow: scroll;">
+          <div class="github-card card-img-top" data-github="priyasundaresan/face_tracking"  data-theme="default"></div>
+          <div class="card-body">
+            <p class="card-text">Prototype for an assistive eye-tracking device (Fall 2018).</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card mb-4 box-shadow">
+          <div class="embed-responsive embed-responsive-16by9 card-img-top">
+            {% load staticfiles %}
+            <video controls="true" class="embed-responsive-item">
+              <source src="{% static 'images/committees/projects_eyetracking.mp4'%}" type="video/mp4" />
+            </video>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Demo of face-tracking mini robot (Fall 2018).</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card mb-4 box-shadow">
+          <div class="embed-responsive embed-responsive-16by9 card-img-top">
+            {% load staticfiles %}
+            <video controls="true" class="embed-responsive-item">
+              <source src="{% static 'images/committees/KeyboardDemo.mp4'%}" type="video/mp4" />
+            </video>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Demo of EMG Keyboard at BioE Day (Spring 2017).</p>
+            <p class="card-text">Left Hand: Flexing and unflexing to demonstrate the analog EMG signal.</p>
+            <p class="card-text">Right Hand: Demo of EMG-typing — A mouse automatically cycles over the keyboard, and the right hand flexes when the mouse hovers over the desired letter (shown in the textbox to the right of the screen).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          {% load staticfiles %}
+          <img class="card-img-top" src="{% static 'images/committees/emg.jpg' %}">
+          <div class="card-body">
+            <p class="card-text">Demo of EMG sensors at BioE Day (Spring 2017).</p>
+          </div>
+        </div>
+
+        <div class="card mb-4 box-shadow">
+          {% load staticfiles %}
+          <img class="card-img-top" src="{% static 'images/committees/projects_bioeday.jpg' %}">
+          <div class="card-body">
+            <p class="card-text">Projects Committee members at BioE Day (Spring 2017).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          {% load staticfiles %}
+          <img class="card-img-top" src="{% static 'images/committees/projects_calday.jpg' %}">
+          <div class="card-body">
+            <p class="card-text">Projects Committee tabling with BioEHS seniors at Cal Day (Spring 2017).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          {% load staticfiles %}
+          <img class="card-img-top" src="{% static 'images/committees/projects_catapult.jpg' %}">
+          <div class="card-body">
+            <p class="card-text">Catapult that rotates, aims, and fires based on EMG signals in the arm (Spring 2017).</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          {% load staticfiles %}
+          <img class="card-img-top" src="{% static 'images/committees/projects_catapult_kid.jpg' %}">
+          <div class="card-body">
+            <p class="card-text">Interactive demo of EMG-controlled catapult at BioE Day (Spring 2017).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          {% load staticfiles %}
+          <img class="card-img-top" src="{% static 'images/committees/projects_hand.jpg' %}">
+          <div class="card-body">
+            <p class="card-text">3D-printed hand being assembled (Fall 2018).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <hr/>
+    </div>
+  </main>
+</body>
+<script>(function(e){var t="//cdn.jsdelivr.net/github-cards/1.0.2/";var r,i=0;var a=e.getElementsByTagName("meta");var n,d,l,c;for(r=0;r<a.length;r++){var s=a[r].getAttribute("name");var f=a[r].getAttribute("content");if(s==="gc:url"){n=f}else if(s==="gc:base"){t=f}else if(s==="gc:client-id"){d=f}else if(s==="gc:client-secret"){l=f}else if(s==="gc:theme"){c=f}}function u(t){if(e.querySelectorAll){return e.querySelectorAll("."+t)}var i=e.getElementsByTagName("div");var a=[];for(r=0;r<i.length;r++){if(~i[r].className.split(" ").indexOf(t)){a.push(i[r])}}return a}function g(e,t){return e.getAttribute("data-"+t)}function h(e){if(window.addEventListener){window.addEventListener("message",function(t){if(e.id===t.data.sender){e.height=t.data.height}},false)}}function v(r,a){a=a||n;if(!a){var s=g(r,"theme")||c||"default";a=t+"cards/"+s+".html"}var f=g(r,"user");var u=g(r,"repo");var v=g(r,"github");if(v){v=v.split("/");if(v.length&&!f){f=v[0];u=u||v[1]}}if(!f){return}i+=1;var o=g(r,"width");var m=g(r,"height");var b=g(r,"target");var w=g(r,"client-id")||d;var p=g(r,"client-secret")||l;var A="ghcard-"+f+"-"+i;var y=e.createElement("iframe");y.setAttribute("id",A);y.setAttribute("frameborder",0);y.setAttribute("scrolling",0);y.setAttribute("allowtransparency",true);var E=a+"?user="+f+"&identity="+A;if(u){E+="&repo="+u}if(b){E+="&target="+b}if(w&&p){E+="&client_id="+w+"&client_secret="+p}y.src=E;y.width=o||Math.min(r.parentNode.clientWidth||400,400);if(m){y.height=m}h(y);r.parentNode.replaceChild(y,r);return y}var o=u("github-card");for(r=0;r<o.length;r++){v(o[r])}if(window.githubCard){window.githubCard.render=v}})(document);
+</script>
+<script type="text/javascript">
+    var myVid=document.getElementById("iframeId");
+    myVid.autoplay = false;
+</script>
+{% endblock %}

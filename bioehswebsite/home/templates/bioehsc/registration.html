@@ -1,0 +1,190 @@
+{% extends "header.html" %}
+{% block content %}
+{% load staticfiles %}
+<link href="{% static 'css/bioehsc.css' %}" rel="stylesheet">
+<body>
+   <main role="main">
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div id="particles-js" ></div>
+      <div class="jumbotron-header">
+         <div class="container" id="jumbotron-text">
+            <h1 class="display-3">BioEHSC™</h1>
+            <h5>BioEngineering High School Competition</h5>
+         </div>
+      </div>
+      <div class="wrapper">
+         <!-- Sidebar Holder -->
+         <nav id="sidebar">
+
+           <ul class="list-unstyled components">
+             <li>
+               <a href="/bioehsc/" class="effect-underline">Overview</a>
+             </li>
+             <li>
+               <a href="/bioehsc/bioe/" class="effect-underline">What is Bioengineering?</a>
+             </li>
+             <li>
+               <a href="/bioehsc/requirements/" class="effect-underline">Requirements</a>
+             </li>
+             <li>
+               <a href="/bioehsc/timeline/" class="effect-underline">Timeline</a>
+             </li>
+             <li>
+               <a href="/bioehsc/faq/" class="effect-underline">FAQ</a>
+             </li>
+             <li>
+               <a href="/bioehsc/registration/" class="effect-underline">Registration</a>
+             </li>
+             <li>
+               <a href="/bioehsc/archives/" class="effect-underline">Past Competitions</a>
+             </li>
+             <li>
+               <a href="/bioehsc/volunteer/" class="effect-underline">Get Involved</a>
+             </li>
+           </ul>
+         </nav>
+         <!-- Page Content Holder -->
+         <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="bioehsc-navbar">
+               <div class="container-fluid">
+                  <button type="button" id="sidebarCollapse" class="navbar-btn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  </button>
+               </div>
+            </nav>
+            <div class="row">
+          <div class="col-md-2">
+            <br>
+            <!-- Trigger the Modal -->
+            <figure class="figure">
+            <img class="figure-img img-fluid rounded" id="myImg" src="{{bioehsc_hs_flyer.url}}"   alt="BioEHSC High School Recruitment Flyer" style="width:90%;max-width:200px">
+            <figcaption class="figure-caption"><p>Click to enlarge.</p></figcaption>
+          </figure>
+            <!-- The Modal -->
+
+            <div id="myModal" class="modal">
+
+              <!-- The Close Button -->
+              <span class="close">&times;</span>
+
+              <!-- Modal Content (The Image) -->
+              <img class="modal-content" id="img01">
+
+              <!-- Modal Caption (Image Text) -->
+              <div id="caption"></div>
+            </div>
+          </div>
+          <div class="col-md-10">
+            <br>
+            <h2>Registration</h2>
+            <p>
+               Thank you for your interest in the 2023 BioEHSC&trade;!
+            </p>
+            <p>
+                To complete registration, team members and the team adviser should provide their information
+                and waivers via the
+               <a class="links" href={{bioehsc_online_application}} target="_blank">online application</a>.
+               This is due on <b>Friday, February 3rd, 2023 at 11:59 PM</b>. Please fill out one form for
+                each team. We suggest reading the contents of the
+               <a class="links" href="/bioehsc/bioe" target="_blank">What Is
+               Bioengineering?</a> and
+               <a class="links" href="/bioehsc/faq" target="_blank">Frequently Asked
+               Questions</a> tabs before registering, to help with answering the application questions.
+            </p>
+            <p>
+               High schools may register up to two teams for the competition this year. This team limit 
+	       is to allow a larger number of different schools to participate. It is up to the coaches/administration
+	       of each school to determine which students/teams are eligible to compete. However, we do have a <a class="links"
+               href={{bioehsc_petition_form}} target="_blank">
+               petition form</a> available if your high school wishes to send more teams. Note that if a 
+	       school has more than one team on the waiting list, admittance will be prioritized to the team 
+	       that fills out the form first. Coaches may email us at <a class="links" href="mailto:bioehsc@bioehs.berkeley.edu">bioehsc@bioehs.berkeley.edu</a>
+	       if the order of waitlist team priority has been pre-determined by the coach(es)/school.
+            </p>
+            <p>
+               All team members and coaches should complete the
+               <a class="links" href={{bioehsc_liability_form}} target="_blank">Liability Waiver</a>,
+               <a class="links" href={{bioehsc_parent_release_form}} target="_blank">Parent/Guardian Release Form</a>,
+               <a class="links" href={{bioehsc_medical_auth_form}} target="_blank">Medical Treatment Authorization Form</a>,
+               and <a class="links" href={{bioehsc_photo_release_form}} target="_blank"> Photo Release Form</a> in order
+               to attend the final symposium. Team members also need to fill out the
+               <a class="links" href={{bioehsc_school_auth_form}} target="_blank">School Authorization form</a>,
+               which requires the signature of the Dean/Head of the Science Department of their school. Team members
+               and coaches should submit these forms via the online application; see the application for more instructions.
+            </p>
+            <p>
+               Please note that it is absolutely imperative to fill out the necessary forms correctly. 
+	       Read through the <a class="links" href={{bioehsc_paperwork_documentation}} target="_blank">paperwork documentation</a>
+	       for instructions on arranging and uploading paperwork, as well as examples of properly-filled responses. If you have any further questions, feel free to 
+	       email <a class="links" href="mailto:bioehsc@bioehs.berkeley.edu">bioehsc@bioehs.berkeley.edu</a>!
+            </p>
+            <p>
+           Lastly, each team member should submit a registration fee of $38,
+	       which will cover the costs of the competition.
+           <b>DO NOT PAY THIS FEE AFTER FILLING OUT THE APPLICATION.</b> When we contact you after registration has
+           closed with the contact information of your undergraduate mentor(s), then we will provide you with more
+           information about purchasing tickets on Eventbrite. Students should submit their registration fee via
+           <a class="links" href={{bioehsc_student_registration_form}} target="_blank">this Eventbrite link</a>
+	       by ordering a “Student Participant” ticket. This will finalize your registration and be used to check-in
+           on the day of the final symposium.
+	       <b>If finances are a preventative factor, please fill out the</b> <a class="links" href={{bioehsc_fee_waiver}} target="_blank">Fee Waiver form</a>.
+	       BioEHS is committed to providing equal opportunity for students of all backgrounds, 
+	       and we know the past year has been exceptionally challenging due to the pandemic. 
+	       With generous sponsorship, we anticipate having enough fee waivers for all students 
+	       that demonstrate financial need.
+	    </p>
+	    <p>
+	       Your registration will be complete after we receive your team’s application, waivers, 
+	       and registration fees, and you should start your projects immediately afterwards. 
+	       Once all materials are received, all team members and their coach will get a confirmation email. 
+            </p>
+            <ul>
+            </p>
+            <!--
+            <h3>Competition/Registration Map</h3>
+            <p>The competition will take place in Hearst Memorial Mining Building and registration will be in Sibley Auditorium.</p>
+            <script>
+            var marker = "{% static 'images/bioehsc/marker.png' %}"
+            </script>
+            <div id="map"></div>
+         </div>
+      </div>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script> -->
+<script>
+      var modal = document.getElementById('myModal');
+
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById('myImg');
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      }
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      </script>
+{% load staticfiles %}
+<script src="{% static 'js/map.js' %}"></script>
+<script type="text/javascript">
+         $(document).ready(function () {
+           $('#sidebarCollapse').on('click', function () {
+             $('#sidebar').toggleClass('active');
+             $(this).toggleClass('active');
+           });
+         });
+      </script>
+   </main>
+</body>
+{% endblock %}

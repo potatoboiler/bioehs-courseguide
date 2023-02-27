@@ -1,0 +1,51 @@
+	{% extends "header.html" %}
+	{% block content %}
+	<body>
+	  <main role="main">
+
+	    <!-- Main jumbotron for a primary marketing message or call to action -->
+	    <div id="particles-js" ></div>
+	    <div class="jumbotron-header">
+	      <div class="container" id="jumbotron-text">
+	        <h1 class="display-3">Prof. Terry Johnson</h1>
+	      </div>
+	    </div>
+
+	    <div class="container">
+	      <!-- Example row of columns -->
+	      <div class="row">
+	        <div class="col-md-12">
+	        	<br>
+	        	<br>
+	          <h3><strong>Information</strong></h3>
+	          <div class="row">
+	            <div class="col-md-6">
+	            	
+	            	<p>Associate Teaching Professor, Bioengineering</p>
+	            	<p>418 Hearst Memorial Mining Building</p>
+	            	<p>Mailcode 1762</p>
+	            	<p>510-664-9080</p>
+	            	<p>tdj@berkeley.edu</p>
+	            	<br>
+	            	<h3><strong>Courses</strong></h3>
+	            	<li><a href="../courseguides/bioe10">BioE10</a></li>
+	            	<li><a href="../courseguides/bioe104">BioE104</a></li>
+	            	<br>
+	            	<h3><strong>Quick links</strong></h3>
+	            	<li><a href="https://www.terrydjohnson.com/">Personal Website</li>
+	          </div>
+	            <div class="col-md-6">
+	              {% load staticfiles %}
+	              <img src="{% static 'images/professors/terryjohnson.jpg' %}" alt="pic" style="width:300px;height:400px;"><br>
+	            </div>
+	   
+	        </div>
+	          </div>
+	      </div>
+	      
+	    </div>
+
+
+	  </main>
+	</body>
+	{% endblock %}

@@ -1,0 +1,127 @@
+{% extends "header.html" %}
+{% block content %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<!-- Our Custom CSS -->
+{% load staticfiles %}
+<link href="{% static 'css/bioehsc.css' %}" rel="stylesheet">
+<body>
+  <main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="particles-js" ></div>
+      <div class="jumbotron-header">
+      <div class="container" id="jumbotron-text">
+        <h1 class="display-3">BioEHSC&trade;</h1>
+        <h5>BioEngineering High School Competition</h5>
+      </div>
+    </div>
+
+
+    <div class="wrapper">
+      <!-- Sidebar Holder -->
+      <nav id="sidebar">
+
+        <ul class="list-unstyled components" class="positioned">
+          <li>
+            <a href="/bioehsc/" class="effect-underline">Overview</a>
+          </li>
+          <li>
+            <a href="/bioehsc/bioe/" class="effect-underline">What is Bioengineering?</a>
+          </li>
+          <li>
+            <a href="/bioehsc/requirements/" class="effect-underline">Requirements</a>
+          </li>
+          <li>
+            <a href="/bioehsc/timeline/" class="effect-underline">Timeline</a>
+          </li>
+          <li>
+            <a href="/bioehsc/faq/" class="effect-underline">FAQ</a>
+          </li>
+          <li>
+            <a href="/bioehsc/registration/" class="effect-underline">Registration</a>
+          </li>
+          <li>
+            <a href="/bioehsc/archives/" class="effect-underline">Past Competitions</a>
+          </li>
+          <li>
+            <a href="/bioehsc/volunteer/" class="effect-underline">Get Involved</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Page Content Holder -->
+      <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="bioehsc-navbar">
+          <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="navbar-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </nav>
+
+        <br>
+        <h2>Competition Overview</h2>
+        <h3><a href="https://bioehs.berkeley.edu/bioehsc/registration/">Registration</a> for the 2023 BioEHSC&trade; is now open, and this year&#39;s symposium will be on April 8th!</h3>
+        <div class="pull-left">
+          <div class="row">
+            <div class="col-md-6">
+              <p>If you are interested in studying bioengineering in college or working in the biotechnology industry someday, BioEHSC&trade;, the bioengineering high school competition at UC Berkeley, can help you learn more about this fast-growing field.</p>
+              <p>BioEHSC&trade; is an annual team research and design competition for high school students, taking place every spring and hosted by the UC Berkeley Bioengineering Honor Society. To help high school students explore bioengineering, BioEHSC&trade; asks contestants to identify a problem in medicine or biology and design a bioengineering solution in seven weeks. Contestants will work in groups of four or five and receive mentorship and advice from a bioengineering-focused researcher throughout the competition period. After the seven weeks, contestants will prepare a scientific poster and presentation that details their proposed solution and analysis of their approach. They will present their findings for evaluation to a panel of professors, graduate students, and industry professionals in a final research symposium.</p>
+          </div>
+            <div class="col-md-6">
+              {% load staticfiles %}
+              <img class="d-block w-100" src="{% static 'images/bioehsc/bioehsc_2022_cover.jpg' %}" alt="Picture of 2022 TM"><br>
+            </div>
+
+      </div>
+
+        <div class="line"></div>
+
+        <h3>Program Benefits</h3>
+        <p>By participating in BioEHSC™, students can:</p>
+        <ul>
+          <li><strong>Learn more about bioengineering:</strong> According to data from the Bureau of Labor Statistics (BLS), bio(medical) engineering is one of the fastest-growing professions in the United States, but very few know what it actually is. By participating in a bioengineering design contest, students can gain a better grasp of bioengineering and make an informed decision on whether bioengineering is right for them.</li>
+          <br>
+          <li><strong>Interact with UC Berkeley faculty and students:</strong> UC Berkeley is the #1 public university, one of the top engineering institutions in the world, and has a myriad of distinguished professors and alumni. In particular, some of our past BioEHSC&trade; mentors include current students and alums of graduate and medical programs at Columbia, Harvard, Johns Hopkins, MIT, Stanford, UC Berkeley, UC San Diego, UC San Francisco, UCLA, and many more. By interacting with these professors and undergraduates and learning from their experiences and guidance, students develop lifelong skills and are poised for academic and professional success.</li>
+          <br>
+          <li><strong>Become familiar with the engineering design process:</strong> Identify a problem, research, define targets, find a solution, analyze potential problems, before actually moving to testing - such is the design process of every engineer. By completing a bioengineering design project and emulating an engineer&#39;s thought process, students can gain critical thinking and analysis skills important for every profession.</li>
+        </ul>
+
+        <div class="line"></div>
+
+        <h3>Recruitment Poster</h3>
+        <p>If you would like to advertise BioEHSC™ in your high school
+          to recruit other students interested in biotechnology, you can use
+          <a href={{bioehsc_poster_link}} class="links"
+           target="_blank">
+          this poster</a>, which includes basic information on the contest. High
+          schools can register up to two teams for the competition. Each team
+          should only consist of students from the same high school. More
+          information, including a petition form and waitlists, can be found under
+          the registration tab.</p>
+          <div class="line"></div>
+
+          <h3>About the Bioengineering Honor Society (BioEHS)</h3>
+          <p>The Bioengineering Honor Society (BioEHS) honors and encourages academic
+            achievement among undergraduate bioengineering students at UC Berkeley through
+            study groups, professional development workshops, community service events, socials,
+            and outreach projects.
+          </p>
+          <p>For more information, please continue to browse our website.</p>
+        </div>
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+          $('#sidebar').toggleClass('active');
+          $(this).toggleClass('active');
+        });
+      });
+      </script>
+    </main>
+  </body>
+  {% endblock %}

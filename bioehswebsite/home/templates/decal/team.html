@@ -1,0 +1,47 @@
+{% extends "header.html" %}
+{% block content %}
+<body>
+  <main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="particles-js" ></div>
+    <div class="jumbotron-header">
+      <div class="container" id="jumbotron-text">
+        <h1 class="display-3">BioE98 -- Breaking Down BioE</h1>
+      </div>
+    </div>
+      <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <h1><strong>Decal Facilitators</strong></h1>
+          <div class="row">
+            <div class="col-md-6">
+            	<h2>Arnav Raha</h2>
+              <p>Arnav is a senior BioE major focusing in computational biology. He intends to go to graduate school to pursue computational neuroscience. Outside of academics, he is involved with GBO and is passionate about animals and linguistics.</p>
+          </div>
+            <div class="col-md-6">
+              {% load staticfiles %}
+              <img class="d-block w-51" src="{% static 'images/decal/arnav.jpg' %}" alt="arnav"><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+            	<h2>Vicky Cui</h2>
+              <p>Vicky is a rising senior studying bioengineering with a concentration in medical devices and biomaterials. She intends to pursue a career in the biomedical industry with a  focus on cancer diagnosis and treatment.</p>
+          </div>
+            <div class="col-md-6">
+              {% load staticfiles %}
+              <img class="d-block w-51" src="{% static 'images/decal/vicky.jpg' %}" alt="vicky"><br>
+            </div>
+        </div>
+        <br>
+        <br>
+      </div>
+    </div>
+
+
+  </main>
+</body>
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends "header.html" %}
+{% block content %}
+<body>
+  <main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="particles-js" ></div>
+    <div class="jumbotron-header">
+      <div class="container" id="jumbotron-text">
+        <h1 class="display-3">Academic Committee</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-6">
+          <br>
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                {% load staticfiles %}
+                <img class="d-block w-100" src="{% static 'images/committees/panel.jpg' %}" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                {% load staticfiles %}
+                <img class="d-block w-100" src="{% static 'images/committees/luncheon2.jpg' %}" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                {% load staticfiles %}
+                <img class="d-block w-100" src="{% static 'images/committees/f2022academic.JPG' %}" alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+        </div>
+        <div class="col-md-6">
+          <br>
+
+          <h2>Description</h2>
+          <p>The Academic Committee is devoted to fostering academic development for BioE students. The committee regularly hosts alumni panels for students to gain insight into the different routes they can take after graduation (MTM, MD, PhD, MD/PhD, industry), luncheons with faculty in the BioE department, and study sessions. Academic Committee also hosts a scheduling advising session right before Phase 1 to help answer any questions students might have and to help students find coursework tailored to their interests within BioE.
+          </p>
+
+          <h2>For Committee Members</h2>
+          <p>Hello and welcome to the Academic Committee!</p>
+          <p>
+            We will be meeting up once a week throughout the semester.  During the beginning of the semester, we'll put a hard lens on how to email professors (daunting!) and how to properly read academic journal entries (confusing!).  We will also be covering basic post-graduation information, such as comparing and contrasting getting a Master's versus a PhD.
+            We will have two subcommittees this semester to choose from: Academic Seminars and Academic Support.  In Academic Seminars, we will focus on utilizing your new-found academic knowledge to set up grad school panels, journal readings, and professor coffee-chats for all members to attend.  In Academic Support, we will set up study sessions, compile course resources, and organize an academic advising session to help our general members (and us) pick classes.
+          </p>
+          <p>
+            By the end of the semester, all academic committee members will have expanded both their academic vocabulary and their networking opportunities. Come join the Academic Committee and let's give everyone the opportunity to learn more about the academic side of bioengineering!
+          </p>
+        </div>
+        <br>
+        <br>
+      </div>
+    </div>
+
+
+  </main>
+</body>
+{% endblock %}

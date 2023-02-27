@@ -1,0 +1,23 @@
+{% extends "header.html" %}
+{% block content %}
+{% load staticfiles %}
+<link href="{% static 'styles.css' %}" rel="stylesheet">
+<body>
+	<main role="main">
+		<div id="particles-js" ></div>
+    <div class="jumbotron-header">
+      <div class="container" id="jumbotron-text">
+        <h1 class="display-3">Industrial Relations</h1>
+      </div>
+    </div>
+		<div class="container">
+			<div class='col md-12'>
+			{{sponsorDetail|safe}}
+		</div>
+		</div>
+		<div class = "container">
+				<p>If you are interested in sponsoring UC Berkeley BioEHS or BioEHSC™, please contact <a href="mailto:externalvp@bioehs.berkeley.edu?" target="_top">externalvp@bioehs.berkeley.edu</a>. </p>
+		</div>
+	</main>
+</body>
+{% endblock %}

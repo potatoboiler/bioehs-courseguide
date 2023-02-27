@@ -1,0 +1,153 @@
+{% extends "header.html" %}
+{% block content %}
+<body>
+  <main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="particles-js" ></div>
+    <div class="jumbotron-header">
+      <div class="container" id="jumbotron-text">
+        <h1 class="display-3">Admission</h1>
+        <h5>Emails from the UC Berkeley Bioengieering department regarding admission will be sent to eligible candidates at the start of each semester.</h5>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <p>Candidate Information Night will be on Monday 2/6, from 7-8 PM <a class="display-5" href=https://berkeley.zoom.us/j/95288674318 target="_blank">at this link</a></p>
+          <h2>Our admission cycle for Spring 2023 is now OPEN.</h2>
+          <!-- <a class="display-5" href=https://docs.google.com/forms/d/e/1FAIpQLSeo9sCvY-jxd9V_VE8WQIMXNG-Qy3Sb8UtAb9-GhtDbZohD5Q/viewform target="_blank">Regular Application Form</a>
+          -->
+          <br>
+          <p>
+            <a class="display-5"
+            href=https://docs.google.com/forms/d/e/1FAIpQLSdGht9_RJhN83Q7RYMlRWztVAAfWgh5zIBvvqWF_wpvkPP6Nw/viewform target="_blank">Prospective Member Interest Form</a>
+            | <a class="display-5" href=https://forms.gle/rVCbjY6cYF7VnJkL6 target="_blank">Information Night RSVP</a>
+            | See <a href="#eligibility">Eligibility</a></p>
+            <p>
+              <!--<a class="display-5"
+              href="https://drive.google.com/file/d/18iprmHGTNmp897QqthN8HmxYm4bOUJIy/view?usp=sharing" target="_blank">Info Night Recording</a>!-->
+              <!--<br>!-->
+              <!--<a href="https://docs.google.com/presentation/d/1pNWAhH8HneD2585QgTtY0ISMUVqiVheUAwKh6ArWZLY/edit?usp=sharing" target="_blank">Info Night Slides</a></p>!-->
+              <!--<p>
+                {% load staticfiles %}
+                <img src="{% static 'images/apply/infonight.png' %}" alt="Application flyer. States the deadlines listed in application form." style="width:400px;height:210px;">
+              </p>
+              !-->
+              <!-- <p>If you would like to learn more about our organization, the resources we provide for our members, and current members' experiences in BioEHS, be sure to come to <a class="display-5" href="http://tinyurl.com/BioEHSInfoNight" target="_blank">Info Night</a> on 9/6 on zoom from 7:30-9:00pm. <b>The application is due at 11:59 PM on Friday, September 9th.</b> </p>
+              <p>Note: For club operations this semester, we are planning on utilizing a hybrid structure to have larger and more impactful events in-person but smaller and more regular meetings or events to be online. We will have more details available during our information night, which you can attend to ask for more specifics.</p>
+              -->
+              <!--<p>
+                <a class="display-5" </a>
+                  The "Breaking Down BioE" Decal application is currently open! See "Decal" tab for details. </p>!-->
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <br>
+                  <h2>Why you should join</h2>
+                </div>
+                <div>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Join a Community</h5>
+                          <p class="card-text">Get to know your fellow candidates and the officer team and participate in volunteer and social events that benefit yourself and the community.</p>
+                          <p> </p>
+                          <a href="/about/officers/" class="btn btn-primary">Meet the officers</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Network</h5>
+                          <p class="card-text">Meet and network with BioEHS alumni through info-sessions, alumni panels, and general meetings.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Find your niche in BioE</h5>
+                          <p class="card-text">Discover or narrow your interests/concentration within BioE by meeting more BioE peers in the classes you’re taking, seeking course advice from BioEHS members, and talking to BioE professors in the field.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Skill Development</h5>
+                          <p class="card-text">Attend professional workshops covering LinkedIn, resumes, technical interviewing, public speaking, or work on hands-on hardware/software projects.</p>
+                          <span><strong>Explore Committees:</strong></span><br>
+                          <div class="btn-group-vertical">
+                            <a href="/committees/projects/" role="button" class="btn btn-outline-primary" id="committee-btns">Projects</a>
+                            <a href="/committees/outreach/" role="button" class="btn btn-outline-secondary" id="committee-btns">Outreach</a>
+                          </div>
+                          <div class="btn-group-vertical">
+                            <a href="/committees/academic/" role="button" class="btn btn-outline-info" id="committee-btns">Academic</a>
+                            <a href="/committees/prodev/" role="button" class="btn btn-outline-dark" id="committee-btns">Pro-Dev</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <br>
+                      <h2><a name="eligibility" class="anchor">Eligibility</a></h2>
+                    </div>
+                    <div class="col-md-12">
+                      <br>
+                      <h4>Prospective Members</h4>
+                      <p>In order to be eligable, students need to have completed one semester at UC Berkeley and/or be a transfer student. The minimum GPA is 3.3 for juniors/seniors (including junior transfers), 3.5 for sophomores, and 3.7 for freshmen (spring).</p>
+                      <p>In addition to the unit and GPA requirements, prospective members must submit our sorting form. The sorting form will be emailed by the department early in the semester. As of 1/30, these emails have been sent out for the Spring 2023 cycle.</p>
+                    </div>
+                    <div class="col-md-12">
+                      <br>
+                      <!--<h4>Non-Bioengineering Applicants</h4>
+                      <p>Prospective members that are planning on transferring into the Bioengineering major from any other major at UC Berkeley may apply using the form above. There is a recommended minimum technical Grade Point Average (GPA) of 3.6 and supplementary materials are required. Admission into the society is probationary; if the transfer into Bioengineering is unsuccessful, membership will be revoked.</p>
+                    -->
+                    </div>
+                    <div class="col-md-12">
+                      <br>
+                      <h4>First Semester Freshmen</h4>
+                      <p>Freshmen in their first semester are not expected to meet the unit
+                        requirements. However, freshmen who are interested in joining the society at
+                        a later date are encouraged to fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeunglCnYuYMrjm_3eLgSTgCfEEMZL99J06VcgwN0gKhVX6Wg/viewform">Prospective Member Interest Form</a> and to attend public events.</p>
+                      </div>
+                      <div class="col-md-12">
+                        <br>
+                        <h4>Non-member Participation</h4>
+                        <p>While applicants to Bioengineering Honor Society must meet minimum grade standards and apply for membership, many of our activities are open to all undergraduates. We feel this will give new undergraduates a chance to get to know the Bioengineering major, career, and peers before deciding to join our society. Please feel free to join us at advertised events and socials.</p>
+                      </div>
+                      <div class="col-md-12">
+                        <br>
+                        <h4>Candidate Semester</h4>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Membership Dues, which is a one-time $70 fee paid in two installments. This charge includes banquet fees and a BioEHS shirt.</li>
+                          <li class="list-group-item">Seven (7) elective events, of which there must be 3 Social, a Professional Development, an Academic, and an Outreach.</li>
+                          <li class="list-group-item">Three (3) General Meetings, which frequently feature professional speakers.</li>
+                          <li class="list-group-item">Four (4) officer hangouts, designed to help candidates get to know the officers.</li>
+                          <li class="list-group-item">Participation in a committee with weekly meetings.</li>
+                          <li class="list-group-item">Candidate Welcome Night (CWN) and Candidate Retreat, where candidates meet and get to know each other through a series of activities.</li>
+                          <li class="list-group-item">Banquet, where officers, members, candidates, and faculty join to celebrate the end of another semester.</li>
+                          <li class="list-group-item">Resume Submission, which we will critique for you after our resume workshop and include in our resume book that biotech companies purchase for recruitment.</li>
+                        </ul>
+                        <br>
+                        <p>If you cannot complete some of the above requirements but would still like to induct as a member of BioEHS, please e-mail the Internal Vice President at <a href="mailto:@bioehs.ivp@gmail.com?" target="_top">bioehs.ivp@gmail.com </a> to discuss possible alternatives.</p>
+                      </div>
+                    </div>
+
+
+                  </div> <!-- /container -->
+
+                </main>
+
+
+              </body>
+              {% endblock %}

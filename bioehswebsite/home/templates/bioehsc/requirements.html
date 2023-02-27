@@ -1,0 +1,117 @@
+{% extends "header.html" %}
+{% block content %}
+
+{% load staticfiles %}
+<link href="{% static 'css/bioehsc.css' %}" rel="stylesheet">
+
+<body>
+  <main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="particles-js" ></div>
+    <div class="jumbotron-header">
+      <div class="container" id="jumbotron-text">
+        <h1 class="display-3">BioEHSC™</h1>
+        <h5>BioEngineering High School Competition</h5>
+      </div>
+    </div>
+
+
+    <div class="wrapper">
+      <!-- Sidebar Holder -->
+      <nav id="sidebar">
+
+        <ul class="list-unstyled components">
+          <li>
+            <a href="/bioehsc/" class="effect-underline">Overview</a>
+          </li>
+          <li>
+            <a href="/bioehsc/bioe/" class="effect-underline">What is Bioengineering?</a>
+          </li>
+          <li>
+            <a href="/bioehsc/requirements/" class="effect-underline">Requirements</a>
+          </li>
+          <li>
+            <a href="/bioehsc/timeline/" class="effect-underline">Timeline</a>
+          </li>
+          <li>
+            <a href="/bioehsc/faq/" class="effect-underline">FAQ</a>
+          </li>
+          <li>
+            <a href="/bioehsc/registration/" class="effect-underline">Registration</a>
+          </li>
+          <li>
+            <a href="/bioehsc/archives/" class="effect-underline">Past Competitions</a>
+          </li>
+          <li>
+            <a href="/bioehsc/volunteer/" class="effect-underline">Get Involved</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Page Content Holder -->
+      <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="bioehsc-navbar">
+          <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="navbar-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+          </div>
+        </nav>
+
+        <h2>Requirements</h2>
+        <p>After recruiting the team, competitors should read over the <a href="/bioehsc/bioe/" class="links" target="_blank">What is Bioengineering?</a> page and decide between biological engineering or medical engineering as a preferred project topic. Teams can also ask the BioEHSC™ committee to randomly assign their team a project topic by indicating so on their registration form.
+      </p>
+      <p>After receiving your applications, you will be assigned a mentor with experience in your team’s research area of interest. The team, with guidance from their mentor, will devise a bioengineering solution to address a specific clinical or biological concern. In addition to identifying this "problem and solution," projects should discuss the following:</p>
+      <ul>
+        <li><strong>Need,</strong> which refers to a description of the team’s biological or clinical issue of choice and an explanation of its relevance. The team should also discuss past methods for addressing the indicated issue.</li>
+        <br>
+        <li><strong>Project details, </strong>which refers to how the team would implement their proposal. The team should also include a step-by-step description of its approach and relevant sketches.</li>
+        <br>
+        <li><strong>Benchmarking,</strong> which refers to how the team will test their design and compare it to existing alternatives. The team should indicate specific qualities to test for, how they will test these qualities, and their expected results.
+        </li>
+        <br>
+        <li><strong>Difficulties and challenges,</strong> which refers to any roadblocks that the team may face during their benchmarking process and ultimate implementation. The team should consider both technical, societal, and ethical challenges to their project and perform a "4A Analysis" on the project’s impact.
+        </li>
+      </ul>
+      <p>Teams will document and present their findings to several panels of judges at the final competition symposium on April 8th, 2023. The judges will consist of bioengineering faculty, postdocs, graduate students, and industry professionals from the biotech and medical devices industries. Teams are allotted twelve (12) minutes for their presentation and six (6) minutes for questions. Judges will evaluate the team's presentation based on the novelty and scientific merit of their project, their overall mastery of the project field, and the clarity of their presentation. Teams will also have created a 30" by 40" landscape research poster, which will be printed out and displayed in a conference format, with a prepared two (2) minute industry pitch. The group of industry judges will consist of professionals from across the biotechnology industry. They will evaluate presentations from a practical business perspective, and will be critiquing presentations as if they were potential investors looking to advance the teams’ products.</p>
+
+      <p>We also ask each team to submit a 3-5 minute video reviewing key bioengineering concepts related to their project at the midpoint of the competition. This video serves three main purposes: firstly, it will aid the judges in evaluating the team’s project. Secondly, following the competition, videos may be featured on the BioEHS website. These videos will expose other students to basic concepts in bioengineering, and help promote the growing field. Lastly, these videos will be judged by the BioEHSC™ committee in a separate competition from the final symposium. Accuracy, clarity, and professionalism will be focused on, and winners will be announced at the final symposium.</p>
+
+      <p>For more information on any of these requirements, contestants can see the <a href="/bioehsc/timeline/" class="links" target="_blank">Suggested Timeline</a>.</p>
+
+      <div class="line"></div>
+
+      <h3>BioEHSC™ Mentors</h3>
+      <p>After completing registration, each team will be assigned a mentor for the duration of competition. This mentor will be a bioengineering-affiliated student at UC Berkeley with research and/or academic experience in the team’s interested topic. Some mentors also have previous teaching and tutoring experience as well. Mentors are expected to communicate with and assist teams at least once a week at a minimum via email or their preferred video conference platform (e.g. Google Teams, Microsoft Teams, Skype, Zoom, etc.).</p>
+      <p>Mentors will only serve an advisory role for teams. They help with tasks that include selecting an engineering concern, formulating a solution, and conceptualizing the ethical concerns and technical challenges arising from the team’s proposal. Mentors will also be the "go-to person" if teams have scientific questions and will assist with primary research skills. They can also assist by giving pointers during presentation rehearsals and poster design.</p>
+      <p>Mentors can also be valuable in areas outside of BioEHSC™ research. Many past BioEHSC™ mentors have gone on to attend top graduate and medical schools at Columbia, Harvard, Johns Hopkins, MIT, Stanford, UC Berkeley, UC San Diego, UC San Francisco, UCLA, and many more; some also work at companies such as Amazon, Google, Genentech, Hewlett-Packard (HP), Medtronic, Veranex, and Verily Life Sciences. Learning from their mentors’ experiences, team members can gain insights into possible career choices and develop skills needed to succeed academically and professionally.</p>
+
+      <div class="line"></div>
+      <h3>Team Coaches</h3>
+      <p>Each team should have an adult affiliated with its high school to serve as the "team coach." The team coach should be a faculty or staff member at the school and will mainly play an administrative role. In particular, the coach should certify that the students above attend the indicated high school and, if the team wins donations of scientific equipment to the high school, assist with any required paperwork. In the event that a school wishes to send more than two teams, the coach(es) will help to decide which teams will receive priority in registering for the competition.</p>
+      <p>We also recommend the coach attend the competition day event to support his or her team(s) and act as another point of contact in the event of a technical problem.</p>
+      <p>Coaches are encouraged to provide the team feedback on their video, poster, pitch, and presentation; however, mentors will handle most of the technical side of the competition. Please see the above <strong>BioEHSC™ Mentor</strong> section for more details on the mentors’ responsibilities.</p>
+
+    </div>
+  </div>
+
+  <!-- jQuery CDN - Slim version (=without AJAX) -->
+
+  <!-- Popper.JS -->
+  <script type="text/javascript">
+  $(document).ready(function () {
+    $('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+      $(this).toggleClass('active');
+    });
+  });
+  </script>
+</main>
+</body>
+{% endblock %}

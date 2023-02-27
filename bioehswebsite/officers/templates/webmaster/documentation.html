@@ -1,0 +1,77 @@
+{% extends "header.html" %}
+{% block content %}
+<body>
+  <main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="particles-js" ></div>
+    <div class="jumbotron-header">
+      <div class="container" id="jumbotron-text">
+        <h1 class="display-3">Website Documentation</h1>
+        <h3>...and general tips</h3>
+      </div>
+    </div>
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <h2>Introduction</h2>
+          <p>Hi! This page is designed to help you, the BioEHS webmasters, maintain and build upon this site. This is no easy task, but the goal of the page is to (hopefully) make it easier on you.
+          The purpose of this page is not to provide sensitive information like passwords, that would be over at the wiki. <strong>Please</strong> take the time to read and understand this, and understand any documentation linked below, and ask questions if you don't get something.</p>
+          <p><strong>author:</strong> @priyasundaresan</p>
+          <p><strong>last updated:</strong> Spring 2019</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Site Basics</h3>
+          <h4>Setup</h4>
+          <ul>
+             <li><p>This website was built using <a href='https://www.djangoproject.com/' target="_blank">Django</a>, a Python-based web framework. Django basically provides a way to make a website that includes multiple "apps", or you might have heard them called "web-apps," and it uses a paradigm called "Model-View-Controller." This is a common design paradigm that
+             app developers and web developers like to use a lot to separate the user interface from the logic and functionality of a project.</p></li>
+             <li><p>The wiki we have is through MediaWiki, PHP-based wiki, and it is also hosted under the same domain.</p></li>
+             <li><p>The frontend is all HTML, CSS, and Javascript, and the backend is in SQLite3. BUT Django provides a great admin site and a nifty Python API to the database so you should never (need to) edit the SQL database directly.</p></li>
+             <li><p>This site along with the wiki is hosted by the <a href='https://www.ocf.berkeley.edu/OCF' target="_blank">OCF</a>.</p></li>
+           </ul>
+           <h4>Resources for Getting Started</h4>
+           <p>Before continuing, you should take time to learn Python, HTML, and Django (at least a little each). You may not need to use any of them because the admin portal should give you full functionality for most things but it will make your life easier if you know these things to some extent.</p>
+           <p>Here are the most helpful resources for learning Python/Django/HTML development:</p>
+           <ul>
+             <li><a href='https://docs.djangoproject.com/en/2.1/intro/tutorial01/' target="_blank">Django Tutorial:</a><p>Go through this tutorial for building a simple Django polls app. You should really do this, but at the very least you should read it. It will help you understand the organization of this site.</li>
+             <li><a href='https://www.codecademy.com/learn/learn-html' target="_blank">Codecademy HTML Course:</a><p>Literally takes 1 hour and is enough to get you up and running with the frontend of this site.</p></li>
+             <li><p>Read through all the .py files in this site, understand especially how the urls.py, views.py, and models.py files interact in each app directory. Look through some of the .html files.</p></li>
+             <li>The HTML templates in this site use something very powerful called Jinja templating, which is a way to embed Python variables in HTML. Check out officers/templates/officers.html or any of the files in officers/templates/accounts to see what I mean. Skim the Jinja reference <a href='http://jinja.pocoo.org/' target="_blank">here.</a></p></li>
+           </ul>
+           <h4>Site Architecture</h4>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col-sm-3">
+           <p>Directory structure of site:</p>
+           {% load staticfiles %}
+           <img src="{% static 'images/directory.png' %}" alt="Third slide"><br>
+         </div>
+          <div class="col-md-9">
+          <h5>Organization of Site</h5>
+            <p>The site is divided into many different 'apps,' as described in the <a href='https://docs.djangoproject.com/en/2.1/intro/reusable-apps/'>Django documentation on reusable apps.</a></p>
+              <ul>
+                <li><p><strong>contact:</strong> an app that handles the functionality in the <a href='/about/contact/' target="_blank">Contact Us page.</a></p></li>
+                <li><p><strong>events:</strong> an app that handles the <a href='/calendar/' target="_blank">calendar.</a></p></li>
+                <li><p><strong>home:</strong> an app that handles basically all the non-complicated, static rendering of the site, for pages that mostly just display information and have little other functionality.</a></p></li>
+                <li><p><strong>industrial:</strong> an app that handles the <a href='/industrial/' target="_blank">industrial relations.</a> and things like adding sponsors and storing that info.</p></li>
+                <li><p><strong>officers:</strong> an app that handles all the user and account-related stuff. 'Officers' is a misnomer as this app handles user authentication for officers, candidates, general members, alumni, and anyone with an account.</p></li>
+              </ul>
+            <p>Each app contains its own models, views, templates, static files like CSS files and Javascript files, and migrations — which are executables that tell Django how to update the database whenever we add models or change them.</p>
+            <p>The bioehs directory is not an app itself but it is the heart of the site and houses all the other applications. It includes things like the settings and configurations for the whole project and tells Django in which apps to look for different url's.</p>
+            <p>The assets folder is where any user-uploaded (including admin-uploaded) media will go. This is essentially for non-static content like profile pictures or flyers that could change.</p>
+          </div>
+          <div class="col-md-9">
+            <br>
+            <h5>Site Administration</h5>
+            <p>To keep the site maintained, you will need to update information each semester. This includes adding users, updating user profiles (such as for instance, updating candidate requirements), changing site content (such as updating the BioEHSC pages), and updating images, links, flyers, etc. Luckily the admin site is set up to handle such things.</p>
+        </div>
+      </div>
+    </main>
+</body>
+{% endblock %}

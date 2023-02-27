@@ -1,0 +1,33 @@
+{% extends "header.html" %}
+{% block content %}
+<body>
+  <main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="particles-js" ></div>
+    <div class="jumbotron-header">
+      <div class="container" id="jumbotron-text">
+        <h3 class="display-3">Log In</h3>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <h3>Candidate/Officer Portal</h3>
+          <br>
+          <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-primary" type="submit">Login</button>
+            <br><br>
+            <a class="btn btn-primary" href="/accounts/password_reset/" role="button">Reset Password</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+{% endblock %}

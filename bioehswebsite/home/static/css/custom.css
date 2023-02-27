@@ -1,0 +1,278 @@
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+body {
+  padding-top: 3.5rem;
+}
+
+
+#jumbotron-text{
+  color: white;
+}
+
+#semester-form{
+  width: auto;
+}
+
+select {
+  margin: 0px 10px;
+  height: 38px;
+}
+
+#prof {
+  border-radius: 10px
+}
+
+.zoom {
+  transition: transform .2s;
+  margin-top: 5px;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.04); /* IE 9 */
+  -webkit-transform: scale(1.04); /* Safari 3-8 */
+  transform: scale(1.04);
+}
+
+.jumbotron{
+  background-image:linear-gradient(to right, #003262, #C4820F);
+}
+
+.jumbotron-header {
+  background-image:linear-gradient(to right, #003262, #46535E);
+  padding: 20px;
+}
+
+.glyphicon-remove {
+  color: red;
+}
+
+.glyphicon-ok {
+  color: green;
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/fonts/glyphicons-halflings-regular.eot');
+  src: url('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+       url('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/fonts/glyphicons-halflings-regular.woff2') format('woff2'),
+       url('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/fonts/glyphicons-halflings-regular.woff') format('woff'),
+       url('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+       url('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font: normal normal 16px/1 'Glyphicons Halflings';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 4px;
+}
+.glyphicon-ok:before{content:"\e013";}
+.glyphicon-remove:before{content:"\e014";}
+.glyphicon-user:before{content:"\e008";}
+
+canvas {
+  position: fixed;
+  opacity: 0.65;
+}
+
+/* For the enlarge on click effect in outreach.html */
+
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.bordered {
+  border-left: 3px solid #17a2b8;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  top: 15px;
+  margin-right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/* For the featured projects carousel in projects.html */
+
+/* For Github cards in projects.html */
+.github-card {
+  border-radius: 5px;
+  padding: 8px 8px 0;
+  background: #fff;
+  color: #555;
+  object-fit: cover;
+  width: auto;
+  height: auto;
+}
+
+.github-card a {
+  text-decoration: none;
+  color: #4183c4;
+  outline: 0;
+}
+.github-card a:hover {
+  text-decoration: underline;
+}
+
+.github-card .header {
+  position: relative;
+}
+.github-card .button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px 8px 4px 7px;
+  color: #555;
+  text-shadow: 0 1px 0 #fff;
+  border: 1px solid #d4d4d4;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 14px;
+  background-color: #e6e6e6;
+  background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
+  background-image: -moz-linear-gradient(#fafafa, #eaeaea);
+  background-image: -ms-linear-gradient(#fafafa, #eaeaea);
+  background-image: linear-gradient(#fafafa, #eaeaea);
+}
+.github-card .button:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #3072b3;
+  background-image: -webkit-linear-gradient(#599bdc, #3072b3);
+  background-image: -moz-linear-gradient(#599bdc, #3072b3);
+  background-image: -ms-linear-gradient(#599bdc, #3072b3);
+  background-image: linear-gradient(#599bdc, #3072b3);
+  border-color: #518cc6 #518cc6 #2a65a0;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+}
+
+#committee-btns {
+  margin-bottom: 5px;
+}
+
+.retro {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 0 auto;
+  border: none;
+  font: Helvetica Neue;
+  font-size: 50px;
+  font-weight:bolder;
+  color: #343a40;
+  /* text-align: center; */
+  text-transform: uppercase;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 0 rgb(238,238,238) , 4px 4px 0 #17a2b8 ;
+}
+
+.dark-carousel {
+  radius: 3px;
+}
+
+.dark-carousel:after {
+  content:"";
+  display:block;
+  border-radius: 10px;
+  position:absolute;
+  z-index: -3;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-image: linear-gradient(to right, #2c3e50, #3498db);
+}
+
+.dark-carousel h5 {
+  color: white;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+.dark-carousel p {
+  color:white;
+  font-size:18px;
+  text-transform: uppercase;
+  font-weight: bolder;
+
+}
+
+#map {
+    width: 100%;
+    height: 400px; margin-top: 40px; margin-bottom: 40px;
+}
+
+.info-window {
+    font-family: 'Montserrat', sans-serif;
+}

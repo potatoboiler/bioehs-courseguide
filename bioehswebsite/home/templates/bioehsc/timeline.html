@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>BioEHS</title>
+
+    <!-- Bootstrap core CSS -->
+    
+    <link href="https://ocf.berkeley.edu/~bioehs/django_static/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+    <!-- Custom styles for this template -->
+    
+    <link href="https://ocf.berkeley.edu/~bioehs/django_static/css/custom.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  </head>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/">BioEHS</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="/about/apply/">Apply</a>
+              <a class="dropdown-item" href="/about/officers/">Officers</a>
+              <a class="dropdown-item" href="/about/contact/">Contact Us</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/calendar/">Calendar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://www.flickr.com/photos/bioehs/albums/">Gallery</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Decal</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="/decal/overview/">Overview</a>
+              <a class="dropdown-item" href="https://docs.google.com/document/d/14Gk0ggFewvpXYt50ZT6Z2LpA4yTQeIHgXZ7AT9LaDFg/edit?usp=drivesdk" target="_blank">Syllabus</a>
+              <a class="dropdown-item" href="/decal/team/">Team</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/industrial/">Industrial Relations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/bioehsc/">BioEHSC™</a>
+      </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Committees</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="/committees/projects/">Projects</a>
+              <a class="dropdown-item" href="/committees/outreach/">Outreach</a>
+              <a class="dropdown-item" href="/committees/academic/">Academic</a>
+              <a class="dropdown-item" href="/committees/prodev/">Professional Development</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Student Services</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="/studentservices/coursemap/">Course Map</a>
+            </div>
+          </li>
+        </ul>
+        
+        <ul class="nav navbar-nav pull-right">
+          <li class="nav item"><a class="btn btn-outline-primary" href="/accounts/login/" role="button">Log In</a></li>
+        </ul>
+        
+      </div>
+    </nav>
+    
+
+<link href="https://ocf.berkeley.edu/~bioehs/django_static/css/bioehsc.css" rel="stylesheet">
+<body>
+   <main role="main">
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div id="particles-js" ></div>
+      <div class="jumbotron-header">
+         <div class="container" id="jumbotron-text">
+            <h1 class="display-3">BioEHSC™</h1>
+            <h5>BioEngineering High School Competition</h5>
+         </div>
+      </div>
+      <div class="wrapper">
+         <!-- Sidebar Holder -->
+         <nav id="sidebar">
+
+           <ul class="list-unstyled components">
+             <li>
+               <a href="/bioehsc/" class="effect-underline">Overview</a>
+             </li>
+             <li>
+               <a href="/bioehsc/bioe/" class="effect-underline">What is Bioengineering?</a>
+             </li>
+             <li>
+               <a href="/bioehsc/requirements/" class="effect-underline">Requirements</a>
+             </li>
+             <li>
+               <a href="/bioehsc/timeline/" class="effect-underline">Timeline</a>
+             </li>
+             <li>
+               <a href="/bioehsc/faq/" class="effect-underline">FAQ</a>
+             </li>
+             <li>
+               <a href="/bioehsc/registration/" class="effect-underline">Registration</a>
+             </li>
+             <li>
+               <a href="/bioehsc/archives/" class="effect-underline">Past Competitions</a>
+             </li>
+             <li>
+               <a href="/bioehsc/volunteer/" class="effect-underline">Get Involved</a>
+             </li>
+           </ul>
+         </nav>
+         <!-- Page Content Holder -->
+         <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="bioehsc-navbar">
+               <div class="container-fluid">
+                  <button type="button" id="sidebarCollapse" class="navbar-btn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  </button>
+               </div>
+            </nav>
+            <h2>Suggested Timeline</h2>
+            <p>To help teams stay on track for completing their projects on time, we ask each team to submit a Google Form check-in to us every week. The form will be emailed to teams and mentors at the beginning of each week, and are due on the Saturday of that week at 11:59 PM. (For example, the check-in for Week 1 is due on Saturday, 2/25).
+            </p>
+            <p>
+               Below is our recommended timeline for project work. In addition to this suggested timeline, there is the
+               <a href="https://drive.google.com/drive/folders/13wWzqr5EhVkSnzRswKIQ8IWdmiFntIBQ?usp=share_link" target="_blank" class="links">BioEHSC&trade; handbook</a>, a comprehensive reference for you to navigate the competition. If you find any aspect of the handbook that needs to be clarified, please fill out this
+               <a href="https://docs.google.com/forms/d/e/1FAIpQLScQ8FyuiS352pGo7Irag9DCGbPY8LshhEVuQUqIQQMNEo9msg/viewform" target="_blank" class="links">feedback form</a> with any suggested corrections or new topics that should be added. The handbook linked above will be updated continuously throughout the competition and a log of edits will be accessible to competitors.
+            </p>
+            <div class="line"></div>
+            <h4><a class="anchor" name="wk1">Week 1: General Brainstorming</a></h4>
+            <p><em>2/19/23 – 2/25/23</em></p>
+            <p>During this time, you will meet your BioEHSC&trade; mentor(s). Your mentor should introduce their research background and some topics of interest they have. Feel free to ask them questions about bioengineering, research, or just college in general!</p>
+            <p>Together with your mentor, brainstorm on possible ideas for your project. Specifically, please consider the following question:</p>
+            <div class="content-quote">
+               <p>What is the problem you are planning to tackle, and what
+                  are ways you can go about solving it?
+               </p>
+            </div>
+            <div class="line"></div>
+            <h4><a class="anchor" name="wk2">Week 2: Research Topic</a></h4>
+            <p><em>2/26/22 – 3/4/23</em></p>
+            <p>In this week, with the help of your mentor, narrow down your problem to a specific clinical or biological issue, and design a specific approach to solve it. This solution will be the topic of your project. Specifically, please consider the following questions:</p>
+            <div class="content-quote">
+               <p>Historically, how have scientists addressed your clinical or biological issue?</p>
+               <p>How is your approach different?</p>
+               <p>Who is your target market?</p>
+            </div>
+            <p>At this stage in your project, it’s important to consider and understand the bioengineering concepts relevant to your research topic. These concepts will form the basis of your team’s video submission. Although the final video is due March 19, 2023, we recommended outlining topics as you research them. Please see the video project section in "Weeks 3-4" below for more information on the video.
+            </p>
+            <p>Furthermore, it may be of interest to also look into the scope of your topic. What is your market size? Who is your target audience/customer? In line with competitors, is your solution disrupting a current industry? Thinking about these questions early on will help frame your industry pitch down the line. Please see the industry pitch section in “Week 6” below for more information.
+            </p>
+            <div class="line"></div>
+            <h4><a class="anchor" name="wk3t4">Weeks 3 to 4:
+               Your Approach and Testing</a>
+            </h4>
+            <p><em>3/5/23 – 3/18/23</em></p>
+            <p>Due to the fluid nature of this part of the process, you have two weeks to flesh out your approach and testing. Specifically, please consider the following questions:</p>
+            <div class="content-quote">
+               <p>How would you go about designing your project?</p>
+               <p>How does your design work?</p>
+               <p>What biology of the system, if any, does it exploit?</p>
+               <p>What are the key aspects of the device that make it work the way it does?</p>
+               <p>Do you foresee any limitations of your device? How would you address these if they arise?</p>
+            </div>
+            <p>Describe your approach, and include sketches of designing your proposed project. Also, think about the possible technical challenges that your project faces.</p>
+            <div class="content-quote">
+               <p>How will you test or benchmark your project?</p>
+               <p>What experiments will you plan to test the key features of your device? (For example, if you are developing a gas mask, how will you test its ability to filter out toxins or particulates from the air?)</p>
+               <p>To what standard will you be comparing your device? (For example, if you are designing a novel gas mask, is it better to compare it to no gas mask, or to a state-of-the-art gas mask?)</p>
+               <p>What quantitative data would you want to get out of your testing?</p>
+               <p>If your testing involves animals or human subjects, what physiological effects will you be examining up close?</p>
+            </div>
+            <p>Include aspects to test, metrics for quantifying test results, expected results for these tests, if relevant, and ways to compare your project to existing alternatives. Also, start thinking about the potential implementation challenges that your device faces. This may include technical concerns with your solution, but also may include brainstorming your go-to market strategy (do you need any governmental approvals?), your long-term vision for your solution (how would you sustain your solution?), etc. This may include technical concerns with your solution, but also may include brainstorming your go-to market strategy (do you need any governmental approvals?), your long-term vision for your solution (how would you sustain your solution?), etc.</p>
+            <p>We suggest that you use a "Concept Selection Matrix" to illustrate your comparisons. Ask your mentors if you are unsure what this is.</p>
+            <p>Sometimes, you may need to rethink and revise the planned approach. For this reason, also, you are given this amount of time. If this happens, know that revision is totally natural to the engineering process! Persevere and confer with your mentors regarding any difficulties.</p>
+            <p>We still expect weekly updates so that we can track your
+               progress through this vital part of the project. We suggest that you
+               begin your research poster now. We suggest that you start by finding
+               30" by 40" landscape poster template on Google and then filling it with
+               information, as you synthesize it. Please see the
+               <a href="#poster" class="links">poster section</a> in Week 6 for specific poster
+               requirements.
+            </p>
+            <h5><a class="anchor" name="videoabstract">Video Abstract</a></h5>
+            <p>We ask each team to prepare a 3-5 minute video reviewing key bioengineering concepts related to their project. This video will be judged by an unbiased committee for a separate competition from the final symposium. Accuracy, clarity, and professionalism will be focused on, and winners will be announced at the final symposium.
+               Here is a <a class="links" href="https://drive.google.com/drive/folders/1cXHw_wunqI201p6DO33m_K4t2Qnl9YTG?usp=share_link" target="_blank">link</a> to some example videos from previous competitions.
+           The video is due at the end of week 4 of the competition, <b>March 19, 2023</b>, at 11:59 PM and will be submitted via this <a class="links" href="https://docs.google.com/forms/d/e/1FAIpQLSe9_zQHGT_efGRXePjZnTbT19-PhjyT9K7qnAAlW_UYkh6Gmg/viewform" target="_blank">Google Form</a>.
+            </p>
+            <p>The video should include:</p>
+            <ul>
+               <li>
+                  <b>Student Introductions</b>
+               </li>
+               <li>
+                  <b>Description of Research Topic</b>
+               </li>
+               <li>
+                  <b>Summary of Bioengineering concepts studied</b>
+               </li>
+               <li>
+                  <b>Detailed description of the most relevant concepts</b>
+                  (You may include illustrations or diagrams)
+               </li>
+            </ul>
+            <h5>Project Abstract</h5>
+            <p>In addition to the video abstract, we ask teams to submit a brief title and 1-paragraph summary of their project, highlighting the key bioengineering approaches to the issues they are trying to address. The abstract will be submitted via this <a class="links" href="https://docs.google.com/forms/u/1/d/e/1FAIpQLSe9_zQHGT_efGRXePjZnTbT19-PhjyT9K7qnAAlW_UYkh6Gmg/viewform?usp=sf_link" target="_blank">Google Form</a> on <b>March 19, 2023</b>, at 11:59 PM.
+            </p>
+            <div class="line"></div>
+            <h4><a class="anchor" name="wk5">Week 5:
+               Challenges</a>
+            </h4>
+            <p><em>3/19/23 – 3/25/23</em></p>
+            <p>This week, you’ll be focusing on the challenges and roadblocks you have encountered during the designing, testing, and benchmarking process over the past four weeks.</p>
+            <h5>Technical Challenges</h5>
+            <p>Engineering is a balancing act: while the idea might be revolutionary, is it actually feasible with the current technology? You may have realized that your novel idea is harder to implement than first expected, or that your solution is not much better than the current ones readily available. Reflect on what went wrong technically over the past four weeks. Remember that engineering is a long, arduous process: judges will not only grade you on your results, but how you interpret and move on from these results!</p>
+            <h5>Societal and Ethical Challenges</h5>
+            <p>Even if your project is scientifically doable, users may have trouble accepting or using your solution. We call these "societal challenges." If these challenges involve moral judgements, they are also considered "ethical challenges."</p>
+            <p>We suggest that you perform a 4A Analysis on your proposed solution to find these challenges.</p>
+            <p>These challenges may include:</p>
+            <ul>
+               <li>
+                  What are the benefits and drawbacks for your solution when used on
+                  patients? How would you weigh these aspects to decide whether to
+                  move ahead for your project?
+               </li>
+               <li>
+                  Is your project financially accessible to many people, or only to a
+                  few people? Is this fair, and should the project continue?
+               </li>
+               <li>
+                  If your project is medical, how will you test your device on humans
+                  ethically? That is, how will you mitigate risks to those
+                  participating in clinical trials?
+               </li>
+            </ul>
+            <div class="line"></div>
+            <h4><a class="anchor" name="wk6">Week 6: Wrap-up</a></h4>
+            <p><em>3/26/23 – 4/1/23</em></p>
+            <p>
+               In the final work week, you’ll be finishing off your research project. While there is no doubt that you have put in countless hours over the last six weeks, the judges and the rest of the world need to learn about your findings.
+               To communicate results to them, your team will convey the project findings in a poster session and present a Powerpoint research presentation. The poster is due on <b>April 1, 2023</b> at 11:59 PM, and the PowerPoint presentation is due on <b>April 6, 2023</b> at 11:59 PM. Below are specifics on the two items:
+            </p>
+            <h5><a class="anchor links" name="poster">Poster</a></h5>
+            <p>
+               To ensure that you can finish your project on time, we suggest that you build your poster’s respective sections as you progress through the project. Start by finding the 30" by 40" landscape poster template provided in the
+          <a class="links" href="https://drive.google.com/drive/folders/1SaG98IXpY4uadkuWwGZRbEEvD8hVYzUr?usp=share_link" target="_blank">templates folder</a>
+               and then filling it with information, as you explore your research topic. It should include:
+            </p>
+            <ul>
+               <li>
+                  <b>Title and author names</b>
+               </li>
+               <li>
+                  <b>Problem and Solution:</b> You identified this in <a class="links" href="#wk1">
+                  Week 1</a> and <a class="links" href="#wk2">Week 2</a>. To help judges identify
+                  and understand this section quickly, please condense this section
+                  to 2 sentences.
+               </li>
+               <li>
+                  <b>History and Alternatives:</b>
+                  You did this in <a class="links" href="#wk2">Week 2</a>.
+               </li>
+               <li>
+                  <b>Detailed Solution and Sketches:</b> You did this in
+                  <a href="#wk3t4" class="links">Weeks 3 to 4</a>. If you incorporate hand-drawn
+                  images on your poster, please use pen when drawing for visibility.
+               </li>
+               <li>
+                  <b>Testing, Benchmarking, and Comparison to Alternatives:</b> You
+                  did this in <a href="#wk3t4" class="links">Weeks 3 to 4</a>. We suggest adding
+                  your concept selection matrix to the poster.
+               </li>
+               <li>
+                  <b>Technical Challenges:</b>
+                  You did this in <a href="#wk5" class="links">Week 5</a>.
+               </li>
+               <li>
+                  <b>Ethical and Societal Concerns:</b> You did this in
+                  <a class="links" href="#wk6">Week 6</a>. This section should be 1.5 times the
+                  length of Technical Challenges, at minimum.
+               </li>
+               <li>
+                  <b>References and acknowledgements:</b> Because BioEHS is
+                  ASUC-sponsored and all our funds, including your registration fees,
+                  are stored in the ASUC’s bank accounts, you must include
+                  "Sponsored by ASUC" as one of your acknowledgements to allow us to
+                  pay for your posters.
+               </li>
+               <li>
+                  <b>High school logo (if allowed) and BioEHS logo (sent via email):
+                  </b> By university policy, using "Cal Bears" or "UC Berkeley" logos
+                  or seals requires special permission from the University of
+                  California. Please refrain from using these images on your poster.
+               </li>
+            </ul>
+            <p>
+               Here is a <a class="links"
+               href="https://drive.google.com/drive/folders/1hVHEvw5KevqR0AW4QHr7TxEspp4wi7VY" target="_blank">link</a> to example posters from previous competitions. These should not serve as direct templates for your team’s poster, but give a general idea of what is expected with respect to content and aesthetics.
+            </p>
+            <p>
+               Remember, please submit your poster by
+               <b>Saturday, April 1st, 2023</b> at 11:59 PM! For uniformity, please
+               submit posters in .ppt or .pptx format and review videos as .mp4
+               formats. Remember to proofread your poster before sending it to us: we
+               can only guarantee to print submissions/revisions that are turned in
+               before the deadline.
+            </p>
+            <h5><a class="anchor links" name="#industrypitch">Industry Pitch</a></h5>
+            <p>
+            To present your posters, you will be conducting an industry pitch. Remember that this pitch is evaluating your project through a different lens compared to the academic presentation as described in each rubric. Some of the key points to keep in mind are using these 2 minutes to convey the story of your solution and to convince your audience as to why this solution should be something worth investing in. Other important items to mention include:
+            </p>
+            <ul>
+               <li>
+                  <b>Go-to-market strategy:</b> What is the process if you wanted to release your solution to your audience?, do you need certain FDA approvals?, etc.
+               <li>
+                  <b>Market size:</b> How big or small is your target market,? is this a fruitful technology to invest in?
+               </li>
+               <li>
+                  <b>Competitors and novelty:</b> How innovative is your solution?, is it disrupting a current industry?
+               </li>
+               <li>
+                  <b>Cost-analysis and scaling opportunities:</b> What is your long-term vision for this product to generate revenue and keep it sustainable?
+               </li>
+            </ul>
+            <p>Many times these can be addressed during the Q&A period, so the pitch can focus on the story, impact, and novelty of the solution.</p>
+            <h5><a class="anchor links" name="#powerpoint">Powerpoint Presentation</a></h5>
+            <p>
+               In addition to the poster and video, teams are required to submit a powerpoint presentation
+           for the academic judging component of the competition. The general format of the presentation
+           should include all components of the scientific poster, and be a maximum of 12 slides. The font
+           size of your presentation should be no smaller than 14-point font (with the exception of your
+           source citing), and we encourage the use of original pictures, diagrams, drawings, and figures
+           throughout the entire presentation to help the judges understand your proposal:
+            </p>
+            <ul>
+               <li>
+                  <b>Title Slide:</b> This should include your project title, author names,
+                  your category (biological or medical engineering), high school logo (if
+                  allowed), and the BioEHSC&trade; logo (sent via email).
+               </li>
+               <li>
+                  <b> Problem and proposed solution:</b> You identified this in <a href=
+                     "#wk1" class="links">Week 1</a> and <a href="#wk2" class="links">Week 2</a>. To help judges identify
+                  and understand this section quickly, please condense this section to 2
+                  bullet points.
+               </li>
+               <li>
+                  <b>History and Alternatives:</b> You did this in <a href="#wk2" class="links">Week 2</a>.
+               </li>
+               <li>
+                  <b>Detailed Solution and Sketches:</b> You did this in <a href="#wk3t4" class="links">
+                  Weeks 3 to 5</a>. We encourage the use of original figures, diagrams,
+                  and drawings to aid the judges in following your presentation.
+               </li>
+               <li>
+                  <b>Testing, Benchmarking, and Comparison to Alternatives:</b> You did this
+                  in <a href="#wk3t4" class="links">Weeks 3 to 5</a>. We suggest adding your concept
+                  selection matrix to the presentation.  We strongly advise you to address the economic
+                  feasibility, and the impact that your proposed solution would have on the product space
+                  which your solution occupies.
+               </li>
+               <li>
+                  <b>Technical Challenges:</b> You did this in <a href="#wk5" class="links">Week 5</a>.
+               </li>
+               <li>
+                  <b> Ethical and Societal Concerns:</b> You did this in <a href="#wk5" class="links">
+                  Week 5</a>.
+               </li>
+               <li>
+                  <b>References and acknowledgements (final slide):</b> In scientific
+                  literature, it is pertinent to cite sources that you studied, and cite
+                  figures, data, and diagrams that are not your own. If you utilize a picture
+                  or diagram that does not belong to you, the source should be provided in the
+                  bottom left or right-hand corner of the slide that it appears on in 8-point
+                  font, APA citation format.
+               </li>
+            </ul>
+            <div class="line"></div>
+            <h3><a class="anchor links" name="wk7">Week 7: Practice</a></h3>
+            <p><i>4/2/23 – 4/8/23</i></p>
+            <p>
+               Get ready for the competition symposium! Please look at the “Judging Criteria” folder in the
+           <a href="https://drive.google.com/drive/folders/1SaG98IXpY4uadkuWwGZRbEEvD8hVYzUr" target="_blank">shared drive folder</a>
+           to see the rubric for how your presentations will be judged. Academic presentations and industry pitches
+           have their own distinct rubrics which emphasize different aspects of the project. Industry judges will listen
+           to 2 minute "elevator pitches" from students presenting their posters, followed by 4 minutes worth of questioning
+           in a conversational style. They will be able to evaluate your projects' feasibility from an industry standpoint.
+           Academic judges will listen to 10 minute powerpoint presentations, followed by a 5 minute Q&A session. They will
+           evaluate with an emphasis on the teams’ scientific understanding and technical accuracy.
+           Tailor your presentations so that they cover all of the rubric categories, and prepare scripts beforehand.
+           Below are some things to be aware of:
+
+            </p>
+            <ul>
+               <li>
+                  Remember to have all team members speak! Designate who is going to say what in the script
+          well before the day of the competition.
+
+               </li>
+               <li>
+                  You may use notecards in the academic presentation, but you should refrain from merely
+          reading through notecards. Make sure to keep the judges engaged by maintaining eye contact.
+
+               </li>
+               <li>
+                  Prepare for questions from each panel of judges. A true understanding of your project can be
+          demonstrated by masterfully taking and responding to critiques and clarifying points.
+
+               </li>
+               <div class="line"></div>
+            </ul>
+            <h3><a class="anchor links" name="competition">Competition Day</a></h3>
+            <p><i>4/8/23</i></p>
+            <p>
+               Congratulations on finishing your project! This is the day you will demonstrate your findings to the world. Teams should plan to check in to the symposium at the UC Berkeley campus (specific location TBD) between 8:45 and 9:15 AM. Scheduled events will begin promptly at 9:30 AM. Below are some further details on the competition day:
+            </p>
+            <ul>
+               <li>
+                  <b>Business Casual</b> will be the required attire for the 2023 BioEHSC&trade;. We chose this
+          attire so that team members can experience the professional atmosphere of scientific conferences.
+               </li>
+               <li>
+                  <b>9:30 AM to 6:00 PM</b> is the estimated runtime of the event. We ask that team members stay the entire period so that in addition to presenting their own work, team members can learn from other projects and attend a series of other events planned for the day, including a keynote speech, a Berkeley student panel, and other enriching activities. Competition results will be presented in the evening in an awards ceremony.
+               </li>
+               <li>
+                  If a team member cannot attend the BioEHSC&trade; symposium, in part or in entirety, please email
+                  <a href="mailto:bioehsc@bioehs.berkeley.edu" class="links">bioehsc@bioehs.berkeley.edu</a> <b>at least one week</b> in advance.
+               </li>
+               <li>
+                  Parents, teachers, classmates and other guests are welcome to the symposium! The BioEHSC&trade; committee has planned many activities for parents and guests who will be present during the day in addition to competitors.
+               </li>
+            </ul>
+            <p>
+        If you have any questions regarding the competition day, please email <a href="mailto:bioehsc@bioehs.berkeley.edu" class="links">
+               bioehsc@bioehs.berkeley.edu</a>.
+            </p>
+            <p>
+               Thank you, and see you there!
+            </p>
+        <div class="line"></div>
+    </div>
+      </div>
+      <script type="text/javascript">
+         $(document).ready(function () {
+           $('#sidebarCollapse').on('click', function () {
+             $('#sidebar').toggleClass('active');
+             $(this).toggleClass('active');
+           });
+         });
+      </script>
+   </main>
+</body>
+
+    <div class='container'>
+    <footer class="pt-4 my-md-5 pt-md-5 border-top" id="footer">
+            <div class="row">
+              <div class="col-6 col-md">
+                <ul class="list-unstyled text-small">
+                <li><a class="btn btn-outline-danger" target="_blank" href="https://goo.gl/forms/gJ53DaO3yeJCAYnV2" role="button">Bug Report</a></li>
+                <br>
+                <li>
+                  <a href="https://www.ocf.berkeley.edu">
+                    <img src="http://www.ocf.berkeley.edu/hosting-logos/ocf-hosted-penguin.svg"
+                    alt="Hosted by the OCF" style="border: 0;" />
+                  </a>
+
+                </li>
+        <br>
+              <li><small class="d-block mb-3 text-muted">Copyright &copy; 2018-2019 BioEHS</small></li>
+            </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5>General</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a class="text-muted" href="/">About</a></li>
+                  <li><a class="text-muted" href="/about/contact/">Contact Us</a></li>
+                  <li><a class="text-muted" href="/about/officers/">Officers</a></li>
+                  <li><a class="text-muted" href="/privacy/">Privacy Policy</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5>Students</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a class="text-muted" href="/about/apply/">Apply</a></li>
+                  <li><a class="text-muted" href="/studentservices/coursemap/">Course Map</a></li>
+                  <li><a class="text-muted" href="/bioehsc/">BioEHSC™</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5>Support BioEHS</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a class="text-muted" href="/donate/">Donate</a></li>
+                  <li><a class="text-muted" href="/industrial/">Industrial Relations</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5>Connect</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a class="text-muted" href="/calendar/"><i class="fa fa-calendar"></i></a></li>
+                  <li><a href='https://www.facebook.com/bioehs' target="_blank"><span class="fa fa-facebook"></span></a></li>
+                  <li><a href='https://www.instagram.com/cal.bioehs/' target="_blank"><i class="fa fa-instagram"></i></a></li>
+                  <li><a href='https://twitter.com/BioEHS' target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </footer>
+        </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    
+    <script src="https://ocf.berkeley.edu/~bioehs/django_static/js/popper.min.js"></script>
+
+    
+    <script src="https://ocf.berkeley.edu/~bioehs/django_static/js/particles.js"></script>
+    
+    <script src="https://ocf.berkeley.edu/~bioehs/django_static/js/app.js"></script>
+    
+    <script src="https://ocf.berkeley.edu/~bioehs/django_static/js/bootstrap.min.js"></script>
+</html>

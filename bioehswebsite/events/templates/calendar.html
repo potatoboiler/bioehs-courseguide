@@ -1,0 +1,62 @@
+{% extends "header.html" %}
+{% block content %}
+<body>
+  <main role="main">
+    {% load staticfiles %}
+    <link href="{% static 'css/fullcalendar.min.css' %}" rel="stylesheet">
+    {% load staticfiles %}
+    <link href="{% static 'css/fullcalendar.print.css' %}" rel="stylesheet" media='print'>
+    {% load staticfiles %}
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    {% load staticfiles %}
+    <script src="{% static 'js/moment.min.js' %}"></script>
+    {% load staticfiles %}
+    <script src="{% static 'js/fullcalendar.min.js' %}"></script>
+    {% load staticfiles %}
+    <script src="{% static 'js/gcal.min.js' %}"></script>
+    <div id="particles-js" ></div>
+    <div class="jumbotron-header">
+      <div class="container" id="jumbotron-text">
+        <h1 class="display-3">Calendar</h1>
+      </div>
+    </div>
+
+    <div class="container" id="jumbotron">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-12">
+
+          <br>
+          <script type='text/javascript'>
+
+          $(function() {
+            $('#calendar').fullCalendar({
+              header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,listYear,basicDay'
+              },
+              weekNumbers: false,
+              displayEventEnd: true,
+              eventColor: '#007bff',
+              navLinks: true, // can click day/week names to navigate views
+              editable: true,
+              eventLimit: true, // allow "more" link when too many events
+              googleCalendarApiKey: 'AIzaSyDK5PEdaOa2Tq7eAbNQWpBc8yci4Q9lDi8',
+              events: {
+                googleCalendarId: 'bioehs@gmail.com'
+              }
+            });
+          });
+
+          </script>
+          <div id='calendar'></div>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div> <!-- /container -->
+
+  </main>
+</body>
+{% endblock %}

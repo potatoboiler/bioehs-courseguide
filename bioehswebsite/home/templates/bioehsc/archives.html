@@ -1,0 +1,412 @@
+{% extends "header.html" %}
+{% block content %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<!-- Our Custom CSS -->
+{% load staticfiles %}
+<link href="{% static 'css/bioehsc.css' %}" rel="stylesheet">
+<!-- Font Awesome JS -->
+<body>
+   <main role="main">
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div id="particles-js" ></div>
+      <div class="jumbotron-header">
+         <div class="container" id="jumbotron-text">
+            <h1 class="display-3">BioEHSC™</h1>
+            <h5>BioEngineering High School Competition</h5>
+         </div>
+      </div>
+      <div class="wrapper">
+         <!-- Sidebar Holder -->
+         <nav id="sidebar">
+            <ul class="list-unstyled components">
+               <li>
+                  <a href="/bioehsc/" class="effect-underline">Overview</a>
+               </li>
+               <li>
+                  <a href="/bioehsc/bioe/" class="effect-underline">What is Bioengineering?</a>
+               </li>
+               <li>
+                  <a href="/bioehsc/requirements/" class="effect-underline">Requirements</a>
+               </li>
+               <li>
+                  <a href="/bioehsc/timeline/" class="effect-underline">Timeline</a>
+               </li>
+               <li>
+                  <a href="/bioehsc/faq/" class="effect-underline">FAQ</a>
+               </li>
+               <li>
+                  <a href="/bioehsc/registration/" class="effect-underline">Registration</a>
+               </li>
+               <li>
+                  <a href="/bioehsc/archives/" class="effect-underline">Past Competitions</a>
+               </li>
+               <li>
+                  <a href="/bioehsc/volunteer/" class="effect-underline">Get Involved</a>
+               </li>
+            </ul>
+         </nav>
+         <!-- Page Content Holder -->
+         <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="bioehsc-navbar">
+               <div class="container-fluid">
+                  <button type="button" id="sidebarCollapse" class="navbar-btn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  </button>
+               </div>
+            </nav>
+            <h2>BioEHSC&trade; 2022</h2>
+               <p>
+                  BioEHSC™ Competition Chairs: Reet Mishra (Senior Chair), Armaan Dwivedi (Junior Chair), Patrick Young (External Relations Chair)
+               </p>
+               <p>
+                  <div>Advisors and Subcommittees:</div>
+                  <br>
+               
+                  Prize/Giveaway Development
+                  <li>Jason Zhang</li>
+                  <li>Roselle Wang</li>
+                  <li>Maxine Sy Chu</li>
+
+                  Mentor/Team Support
+                  <li>Patrick Young</li>
+                  <li>Manasi Kumar</li>
+                  <li>Myla Batuyong</li>
+                  <li>Hayden Yeung</li>
+                  <li>Katheryn Zhou</li>
+                  <li>Sankalp Sharma</li>
+                  <li>Javier Mokkarala-Lopez</li>
+
+                  Logistical Problem Tackling (LPT)
+                  <li>Pratush Saravanan</li>
+                  <li>PeiWen Xiao</li>
+                  <li>Kristie Diep</li>
+                  <li>John Guan</li>
+                  <li>S Sabaat</li>
+               </p>
+               <p>
+                  The 2022 BioEHSC™ marked the return to an in-person iteration of the competition for the first time in three years! 
+                  This year saw 46 registered teams from 23 high schools from the Bay Area, San Diego, and even South Korea! 
+                  Dr. Vivenne Ming, co-founder and executive chair of think-tank incubator Socos Labs, gave the keynote speech at the opening ceremony. 
+                  There were various in-person events that enabled competitors to engage more effectively with both fellow peers as well as Berkeley undergraduates, 
+                  including lab tours, an assistive technology workshop with EnableTech, a hydrogels workshop with Bioprinting, 
+                  and even an Arduino workshop led by BioEHS’s own Projects committee! Furthermore, experienced undergraduate and graduate students led research panels 
+                  for competitors and talks for parents about the UC Berkeley student experience. Exploring the fields of biological and medical engineering, competitors 
+                  presented their final work to judges from both academic and industry backgrounds affiliated with UC Berkeley, UC San Francisco, UCLA, MIT, University 
+                  of Pennsylvania, Agriplex Genomics, Amyris, Ceevra, Deciduous Therapeutics, Felix Biotechnologies, and more on Saturday, April 2nd, 2022.
+               </p>
+            <h2>BioEHSC&trade; 2021</h2>
+                <p>
+                    BioEHSC™ Competition Chairs: Jason Zhang (Senior Chair), Reet Mishra (Junior Chair), John Guan (External Relations Chair)
+                </p>
+                <p>
+                    Advisors & Committee:
+                    <li>Nicholas Nolan</li>
+                    <li>Nikhil Gupta</li>
+                    <li>Daniel Yang</li>
+                    <li>Patrick Young</li>
+                    <li>Asa Smith</li>
+                    <li>Arnav Raha</li>
+                    <li>Pratush Saravanan</li>
+                    <li>Lily Shang</li>
+                    <li>Niki Shakouri</li>
+                    <li>Sharon Sheyman</li>
+                    <li>Sankalp Sharma</li>
+                    <li>Peiwen Xiao</li>
+                    <li>Manasi Kumar</li>
+                    <li>Kristie Diep</li>
+                    <li>Abinaya Anbuchelvan</li>
+                </p>
+                <p>
+                The 2021 BioEHSC™ saw over 50 registered teams from 31 distinct high schools for our second successful virtual competition. A critical goal for this iteration was to encourage the participation of students from underrepresented backgrounds, as well as simulate as close to an in-person symposium as possible. From as close as the Bay Area to as far out as South Korea, this year’s teams and mentors have braved all the challenges of the pandemic to develop some of the most innovative and impactful projects. Exploring two major categories: biological engineering and medical engineering, competitors presented their final work through Zoom and Gather.Town to panels of industry professionals, academic faculty, and researchers on Saturday, April 10th, 2021.
+                </p>
+	    <h2>BioEHSC&trade; 2020</h2>
+            <p>
+            	BioEHSC Competition Chairs: Nicholas Nolan (Senior Chair), Jason Zhang (Junior Chair), Daniel Yang & Nikhil Gupta (External Relations Chairs)
+            </p>
+            <p>
+            	Advisors & Committee: 
+            	<li>Victoria Lee</li>
+            	<li>Elizabeth Wang</li>
+            	<li>Lily Shang</li>
+            	<li>Bryan Wong</li>
+            	<li>Elizabeth Zang</li>
+            	<li>Han Zhang</li>
+            	<li>Carol Gao</li>
+            	<li>Sindhu Ravuri</li>
+            	<li>Connor Tou</li>
+            	<li>Patrick Young</li>
+            	<li>Sankalp Sharma</li>
+            	<li>Trevor Suh</li>
+            	<li>Asa Smith</li>
+		<li>John Guan</li>
+		<li>Arnav Raha</li>
+            </p>
+            <p>
+               As the emergence of the COVID-19 pandemic coincided with the 2020 BioEHSC™, our top priority was to maintain participant safety; as such, this year’s competition successfully shifted to a digital platform. 39 teams from 26 distinct high schools competed, the largest number of participating high schools yet, yielding a bright and diverse cohort of competitors. With their mentors, teams explored their biological and medical engineering ideas. On Saturday, April 4th, teams presented the culmination of their work at the digital symposium to judges composed of faculty, researchers, and industry representatives.
+            <h2>BioEHSC&trade; 2019</h2>
+            <p>
+            	BioEHSC Competition Chairs: Victoria Lee (Senior Chair), Nicholas Nolan (Junior Chair)
+            </p>
+            <p>
+            	Advisors & Committee: 
+            	<li>Nicholas Jeffreys</li>
+            	<li>Lily Shang</li>
+            	<li>Connor Tou</li>
+            	<li>Elizabeth Zhang</li>
+            	<li>Ashna Mangla</li>
+            	<li>Bryant Lu</li>
+            	<li>Daniel Yang</li>
+            	<li>Nikhil Gupta</li>
+            	<li>Edwin Monroy</li>
+            	<li>Kaleb Branda</li>
+            	<li>Natalie Simonian</li>
+            	<li>Sindhu Ravuri</li>
+            	<li>Shirley Li</li>
+            </p>
+            <p>
+               The 2019 BioEHSC™ saw over 50 registered teams from 23 distinct high schools from the Bay Area and as far as Nevada.  This competition group was by far the largest, and focused heavily on its outreach to underprivileged communities; the results were remarkably thorough, and the teams' seven weeks of labor were rewarded in their presentations at the final symposium on Saturday, April 6. It also saw more community involvement with judges affiliated with UC Berkeley, UC San Francisco, Bolt Threads, Berkeley Lawrence National Labs, Amyris, Venture Capital Groups, Stanford, MIT, Kaiser Permanente, and more ! Presentations were split between the topics of biological and medical engineering.
+            </p>
+            <h2>BioEHSC&trade; 2018</h2>
+            <p>
+            	BioEHSC Competition Chairs: Nicholas Jeffreys (Senior Chair), Victoria Lee (Junior Chair)
+            </p>
+            <p>
+            	Advisors & Committee: 
+            	<li>Sean Kitayama</li>
+            	<li>Jin Tanizaki</li>
+            	<li>Rudra Mehta</li>
+            	<li>Allen Yun</li>
+            	<li>Brenda Yang</li>
+            	<li>Andrew Nam</li>
+            	<li>Connor Tou</li>
+            	<li>Kaleb Branda</li>
+            	<li>Kevin Godines</li>
+            	<li>Natalie Simonian</li>
+            </p>
+            <p>
+               The 2018 BioEHSC™ iteration sought and achieved greater diversification of its competing class, particularly to underprivileged communities, with 35 registered teams from  16 schools.  Both new and old competitors alike saw the fruition of their labor on April 7, 2018, when they presented their research design projects to panels of industry professionals and academic researchers, broadly partitioned into categories of biological and medical engineering.
+            </p>
+            <h2>BioEHSC&trade; 2017</h2>
+            <p>
+            	BioEHSC Competition Chairs: Sean Kitayama (Senior Chair), Nicholas Jeffreys (Junior Chair)
+            </p>
+            <p>
+            	Advisors & Committee: 
+            	<li>Zian Liu (MTM ‘17, Graduate Adviser and Co-Founder, BioEHSC)</li>
+            	<li>Rohan Thakur (BioE ‘17, Senior Adviser, BioEHS)</li>
+            	<li>Jeffrey Feng (BioE ‘17, Senior Adviser, BioEHS)</li>
+            	<li>Kenneth Jeffris</li>
+            	<li>Zishuai (Zack) Chou</li>
+            	<li>Lucas Kampmann</li>
+            	<li>Victoria Lee</li>
+            	<li>Qianhe (Eiffel) Zhang</li>
+            	<li>Natalie Simonian</li>
+            	<li>Tejal Gala</li>
+            	<li>Caleb Lee</li>
+            	<li>Alma Halgren</li>
+            </p>
+            <p>
+               The 2017 BioEHSC™ reflected an increasing interest in the bioengineering field, 
+               growing even larger than its predecessors--with almost 170 students in attendance,
+               the competition was bursting with talent and innovative ideas. 
+               Competitors began planning in late February, developing an engineering solution to
+               a problem in either Medical or Biological Engineering, and presented their hypothesized
+               designs at the final symposium on Saturday, April 1, 2017. 
+            </p>
+            <h2>
+               <div class='embedsocial-album' data-ref="ca710ec0495c12f4e99e720b6309c9d0a8bd4d82"></div><script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/embedscript/ei.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialScript"));</script>
+            </h2>
+            <h2>BioEHSC&trade; 2016</h2>
+            <p>
+            	BioEHSC Competition Chair: Rohan Thakur
+            </p>
+            <p>
+            	Committee:
+            	<li>Rohan Thakur, Chair (BioE ‘17)</li>
+            	<li>Rudra Mehta, Senior Academic Coordinator (BioE/EECS ‘18)</li>
+            	<li>Darya Fadavi, President of BioEHS (BioE ‘17)</li>
+            	<li>Anisha Kumar, Internal Vice President, BioEHS  (BioE ‘17)</li>
+            	<li>Jeffrey Feng, External Vice President, BioEHS (BioE ‘17)</li>
+            	<li>Alexander Leung</li>
+            	<li>Lucas Kampman</li>
+            	<li>Katelyn Greene</li>
+            	<li>Sarah Ogden</li>
+            	<li>Bowen Wang</li>
+            	<li>Sarah Chin</li>
+            </p>
+            <p>
+            	Key Advisers: 
+            	<li>Zian Liu, Senior Adviser, BioEHS and Co-Founder, BioEHSC (BioE, Public Policy ‘16)</li>
+            	<li>Dorian Liepmann (Prof of BioE and Faculty Adviser, BioEHS)</li>
+            </p>
+            <p>
+               BioEHSC&trade; expanded once again in its third year to reach 110 students
+               from nine high schools around the Bay Area. A critical outreach goal
+               was to extend participation to students from underprivileged
+               backgrounds. Research projects began in late February and were judged
+               at the final symposium on Saturday, April 9, 2016 at Stanley Hall on
+               the UC Berkeley campus. Exploring two distinct subfields of
+               bioengineering: synthetic biology and biomedical devices, competitors
+               created 22 individual projects, a selection of which is listed below:
+            </p>
+            <ul>
+               <li>
+                  Genetically modifying the TAS2R38 gene in Brussels sprouts with CRISPR
+                  technology
+               </li>
+               <li>Using nanotechnology to combat antihistamine overdose</li>
+               <li>
+                  Using CRISPR/Cas9 to edit the genome of mosquitos by inserting a gene
+                  sequence specific for the Zika antibody
+               </li>
+               <li>Catheter port system with lymph node casin to treat lymphedema</li>
+               <li>
+                  Addressing infectious <em>E. coli</em> through quorum sensing
+                  repression
+               </li>
+               <li>
+                  Detection of peanut allergens utilizing commercially available glucose
+                  meters
+               </li>
+               <li>Internal braces and antifibrinolytics on scoliosis treatment</li>
+               <li>pH sensitive hydrogels for efficient drug delivery for GERD</li>
+               <li>
+                  Treatment of Chagas Disease through enzymatic inhibitors and antibodies
+                  delivered with transformed <em>E. coli</em>
+               </li>
+               <li>
+                  Eliminating hemagloblastomas from von Hippel-Lindau Syndrome via
+                  synthetic gene circuits
+               </li>
+               <li>
+                  Dosage control of Measles antigen in <em>Musa Cavendishii</em> as an
+                  edible vaccine
+               </li>
+               <li>Designing ambient noise-cancelling programmable hearing aids</li>
+               <li>
+                  Optimizing production of renewable butanol biofuel from waste through
+                  genetically engineered <em>Saccharomyces cerevisiae</em>
+               </li>
+               <li>Using virtual reality and neurofeedback to treat depression</li>
+               <li>
+                  Smartinsulin: an innovative treatment approach for juvenile disease
+               </li>
+            </ul>
+            <p>
+               Below are pictures from the event:
+            </p>
+            <h2>
+               <div class='embedsocial-album' data-ref="05417a92f5d763b7db3f762745097cdfd9b9a70c"></div><script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/embedscript/ei.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialScript"));</script>
+            </h2>
+            <h2>BioEHSC&trade; 2015</h2>
+            <p>
+            	BioEHSC Chair: Arjun K. Aditham (Bioengineering ‘15) 
+            </p>
+            <p>
+            	Committee: 
+            	<li>Arjun K. Aditham (Chair, Bioengineering ‘15)</li>
+            	<li>Piyali Banerjee (BioE ‘17)</li>
+            	<li>Jeffrey Chu (BioE ‘15)</li>
+            	<li>Darya Fadavi (BioE ‘17)</li>
+            	<li>Jeffrey Feng (BioE ‘17)</li>
+            </p>
+            <p>
+            	Key Advisers: 
+            	<li>Zian Liu (President of BioEHS and Co-Founder, BioEHSC)</li>
+            	<li>Rahul Nayak (MTM ‘15, Senior Adviser, BioEHS and Co-Founder, BioEHSC)</li>
+            	<li>Teresa Head-Gordon (Chancellor’s Prof, Chemistry and Prof, BioE and CBE)</li>
+            	<li>Dorian Liepmann (Prof of BioE and Faculty Adviser, BioEHS)</li>
+
+            </p>
+            <p>
+               BioEHSC&trade; 2015 was our second year of the competition. We expanded to
+               nearly 80 students in 15 teams from Albany, Harker, Logan, Lowell and
+               Saint Francis High Schools.
+            </p>
+            <p>
+               Research began in February and the symposium was held on Saturday,
+               April 4, 2015. Competitors explored two subfields of bioengineering
+               - synthetic biology and biomedical devices. Below is a selection of
+               projects that students proposed for the competition:
+            </p>
+            <ul>
+               <li>
+                  Using 3D printing to create patient-specific livers for transplantation
+               </li>
+               <li>
+                  Combating freshwater human parasites via biosynthesized anti-parasitics
+               </li>
+               <li>
+                  Treating Drug Resistant bacteria with engineering bacterial vectors
+               </li>
+               <li>Using engineered yeast for rapid, low cost detection of Ebola</li>
+               <li>
+                  Mitigating radiation damage from medical imaging by targeted
+                  antioxidant delivery
+               </li>
+               <li>Genetically modifying potato plants to combat iron deficiencies</li>
+               <li>Development of novel polymers to prevent surgical infection</li>
+               <li>A wearable diagnostic to detect heart attacks</li>
+               <li>Engineered bacteria to improve hydrogen production for fuel cells</li>
+            </ul>
+            <p>
+               There were 15 distinct projects in 2015.
+            </p>
+            <p>
+               Below are pictures from the event:
+            </p>
+            <h2>
+               <div class='embedsocial-album' data-ref="553df44586a29fdd40c867ff1cd18fb77fa342ea"></div><script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/embedscript/ei.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialScript"));</script>
+            </h2>
+            <h2>BioEHSC&trade; 2014</h2>
+            <p>
+            	Co-Founders: 
+            	<li>Zian Liu (Academic Coordinator, Bioengineering/Public Policy ‘16)</li>
+            	<li>Rahul Nayak (Senior Academic Coordinator, Bioengineering ‘14)</li>
+            	<li>Shamn Singh (Competition Chair, Electrical Engineering and Computer Science ‘14)</li>
+            </p>
+            <p>
+               BioEHSC&trade; 2014 was our inaugural competition, and attracted around 50
+               students in 11 teams from Albany, Berkeley, Lowell, and Lynbrook High
+               Schools.
+            </p>
+            <p>
+               Research began in early March, and the symposium was held on Sunday,
+               April 19, 2014. Competitors explored two subfields of bioengineering -
+               synthetic biology and biomedical devices. Below is a selection of
+               projects that students proposed for the competition:
+            </p>
+            <ul>
+               <li>Treating Vitamin A deficiency through engineering gut bacteria</li>
+               <li>Engineering yeast to target and treat gastrointestinal illnesses</li>
+               <li>Glucose sensing watch</li>
+               <li>Treating Alzheimer’s with retrovirus approaches</li>
+               <li>Bioabsorbable heart stents</li>
+               <li>Mask-type breathing filters</li>
+            </ul>
+            <p>
+               There were a total of 11 distinct projects in 2014.
+            </p>
+            <p>
+               Furthermore, here are some pictures of the day of the event:
+            </p>
+            <h2>
+               <div class='embedsocial-album' data-ref="094557debcfda2316946dc56af9cd537ca337947"></div><script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/embedscript/ei.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialScript"));</script>
+            </h2>
+         </div>
+      </div>
+      </div>
+
+      <script type="text/javascript">
+         $(document).ready(function () {
+           $('#sidebarCollapse').on('click', function () {
+             $('#sidebar').toggleClass('active');
+             $(this).toggleClass('active');
+           });
+         });
+      </script>
+   </main>
+</body>
+{% endblock %}

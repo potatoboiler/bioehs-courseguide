@@ -1,0 +1,232 @@
+{% extends "header.html" %}
+{% block content %}
+
+{% load staticfiles %}
+<link href="{% static 'css/bioehsc.css' %}" rel="stylesheet">
+<body>
+   <main role="main">
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div id="particles-js" ></div>
+      <div class="jumbotron-header">
+         <div class="container" id="jumbotron-text">
+            <h1 class="display-3">BioEHSC™</h1>
+            <h5>BioEngineering High School Competition</h5>
+         </div>
+      </div>
+      <div class="wrapper">
+         <!-- Sidebar Holder -->
+         <nav id="sidebar">
+
+           <ul class="list-unstyled components">
+             <li>
+               <a href="/bioehsc/" class="effect-underline">Overview</a>
+             </li>
+             <li>
+               <a href="/bioehsc/bioe/" class="effect-underline">What is Bioengineering?</a>
+             </li>
+             <li>
+               <a href="/bioehsc/requirements/" class="effect-underline">Requirements</a>
+             </li>
+             <li>
+               <a href="/bioehsc/timeline/" class="effect-underline">Timeline</a>
+             </li>
+             <li>
+               <a href="/bioehsc/faq/" class="effect-underline">FAQ</a>
+             </li>
+             <li>
+               <a href="/bioehsc/registration/" class="effect-underline">Registration</a>
+             </li>
+             <li>
+               <a href="/bioehsc/archives/" class="effect-underline">Past Competitions</a>
+             </li>
+             <li>
+               <a href="/bioehsc/volunteer/" class="effect-underline">Get Involved</a>
+             </li>
+           </ul>
+         </nav>
+         <!-- Page Content Holder -->
+         <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="bioehsc-navbar">
+               <div class="container-fluid">
+                  <button type="button" id="sidebarCollapse" class="navbar-btn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  </button>
+               </div>
+            </nav>
+            <h2>FAQ</h2>
+            <p>
+               Please see below for frequently-asked questions about BioEHSC™. If a
+               question you have has not been answered below, please do not hesitate
+               to contact the BioEHSC™ committee at
+               <a class="links" href="mailto:bioehsc@bioehs.berkeley.edu">bioehsc@bioehs.berkeley.edu</a>, and our
+               competition chairs will reply within 24 hours.
+            <div class="line"></div>
+            <h3>The BioEHSC™ Committee</h3>
+            <br>
+            <h5>Who organizes BioEHSC&trade;?</h5>
+            <p>
+               BioEHSC&trade; is hosted by the Bioengineering Honor Society at UC Berkeley
+               (BioEHS), an ASUC-sponsored student group affiliated with the
+               Department of Bioengineering. BioEHS consists of bioengineers with high
+               professional or academic achievement and exemplary character, and
+               strives to improve bioengineering awareness and education both within
+               UC Berkeley and in the community beyond.
+            </p>
+            <p>
+               At the UC Berkeley campus, the Bioengineering Honor Society is known for its
+               alumni network and academic prestige. The Bioengineering High School Competition,
+               sponsored by BioEHS, is the only biotech-specific high school competition and
+               outreach program in the nation.
+            </p>
+            <h5>How can I contact the BioEHSC&trade; committee?</h5>
+            <p>
+               The BioEHSC&trade; committee’s email address is
+               <a class="links" href="mailto:bioehsc@bioehs.berkeley.edu">bioehsc@bioehs.berkeley.edu</a>.
+               Our senior competition chair, Armaan Dwivedi, and co-junior competition chairs, Anya Raju and
+               Nathan Wang, check the email daily and will reply within 24 hours of a sent email.
+            </p>
+            <div class="line"></div>
+            <h3>Team Registration and Changes</h3>
+            <br>
+            <h5>Who can participate in this competition?</h5>
+            <p>
+               All high school students are welcome to participate in BioEHSC&trade;.
+               Students must form teams of four or five from their high school and
+               complete the
+               <a class="target links" href="/bioehsc/requirements/">project requirements</a>
+               in order to qualify for the competition.
+            </p>
+            <h5>How many teams can I register for my high school?</h5>
+            <p>
+               High schools may register up to two teams before the deadline. High
+               schools that wish to send more than two teams can fill out a waiting
+               list form to send more if space is available. Faculty sponsors can
+               email the senior and junior competition chair at
+               <a class="target links" href="mailto:bioehsc@bioehs.berkeley.edu">bioehsc@bioehs.berkeley.edu</a> for more
+               details in regards to the waiting list form if your school wishes to
+               send more than two teams!
+            </p>
+            <h5>Can I participate in multiple projects?</h5>
+            <p>
+               Competitors may participate in more than one project, albeit the
+               workload can potentially become overwhelming. Contestants who
+               participate in multiple teams do not have to pay the registration fee
+               of $38 more than once.
+            </p>
+            <h5>
+               If my team cancels, what is the policy regarding competition fee
+               refunds?
+            </h5>
+            <p>
+               If your team chooses to cancel their participation in the competition,
+               we will refund your registration fee up to the end of the first week
+               of the competition. In order to cancel your team’s participation,
+               please email your request to
+               <a class="target links" href="mailto:bioehsc@bioehs.berkeley.edu">bioehsc@bioehs.berkeley.edu</a>
+               and fill out the form that is sent to you.
+            </p>
+            <h5>How do we switch a team member on our team?</h5>
+            <p>
+               If your team wishes to substitute a team member, your team is
+               responsible for reimbursing the following member. To request a change
+               in team member, please notify the senior and junior competition chair
+               immediately at <a class="target links" href="mailto:bioehsc@bioehs.berkeley.edu">bioehsc@bioehs.berkeley.edu</a>,
+               and fill out the form that is sent to you in response. Unless due to extenuating
+               circumstances, we will only accept team member substitutions until the
+               end of the second week of the competition.
+            </p>
+            <div class="line"></div>
+            <h3>Coaches and Chaperones</h3>
+            <br>
+            <h5>
+               Does our coach or chaperone have to stay for the entire competition?
+            </h5>
+            <p>
+               Coaches and chaperones serve as the primary emergency contact for competitors,
+               so they are expected to stay as long as a competitor under their charge is at the competition.
+               Coaches and chaperones do not have to stay at the competition building constantly, but,
+               in an emergency, we need to be able to contact them easily, and they need to be quick to arrive
+               at the competition.
+            </p>
+            </p>
+            <h5>Can multiple teams share the same coach or chaperone?</h5>
+            <p>
+               A coach or chaperone may sponsor multiple teams as long as it is in
+               compliance with your school policies.
+            </p>
+            <div class="line"></div>
+            <h3>Competition Research Period</h3>
+            <br>
+            <h4>I just registered my team. When can I start?</h4>
+            <p>
+               Teams may start brainstorming potential projects as soon as they submit
+               registration fees. Mentor(s) will be in contact with your
+               team as soon as possible when the registration fees are received.
+            </p>
+            <h4>
+               I am having trouble contacting our mentor, what do I do?
+            </h4>
+            <p>
+               If you are having difficulty contacting your mentor, let us know
+               immediately at <a class="target links" href="mailto:bioehsc@bioehs.berkeley.edu">bioehsc@bioehs.berkeley.edu</a>.
+               The accessibility and quality of the mentorship provided
+               is taken seriously. When you contact us, attempt to
+               re-contact your mentor and <i>cc</i>
+               <a class="target links" href="mailto:?cc=bioehsc@bioehs.berkeley.edu">bioehsc@bioehs.berekley.edu</a> on the
+               email. If the mentor does not respond, the committee will contact the
+               mentor. If deemed necessary, we will re-assign you a new mentor or
+               refer your team to a member of the mentor adversarial panel, a
+               collection of experienced undergraduates and graduate students.
+            </p>
+            <h4>
+               How can I access articles or periodicals that are subscription-access
+               only?
+            </h4>
+            <p>
+               Many prestige journals operate on a subscription basis, or delayed open 
+	       access meaning that only old articles can be accessed freely on journal 
+	       websites. We suggest searching for articles that are <b>open access</b>. 
+	       PLOS (Public Library of Science) runs a suite of open-access journals; 
+	       <i>PLOS ONE</i> contains a staggering breadth of scientific publications. 
+	       Many other open access sources of information include websites run by the CDC. 
+	       You may also visit <a class="target links" href="http://doaj.org">http://doaj.org</a>
+	       for a listing of peer reviewed, open access journals. In addition, you can 
+	       ask your mentor to access scientific literature by sending them the link to 
+	       the article you wish to read. As a UC Berkeley student, they will have access 
+	       to all journals that UC Berkeley is subscribed to.
+            </p>
+            <div class="line"></div>
+            <h3>Competition Day</h3>
+            <br>
+            <h4>When and where is the competition scheduled?</h4>
+            <p>
+               The competition will be held in person this year at the UC Berkeley campus. We will be
+               monitoring the pandemic and will follow our local county guidelines. As of now, we will
+               require proof of vaccination or proof of a negative COVID-19 test 72 hours prior to
+               symposium day, and masks are strongly encouraged but not required.
+            </p>
+            <h4>Does our team have to be present for the entire competition?</h4>
+            <p>
+               All teams are expected to be present for the entire duration of the
+               competition. However, if a team member or an entire team must leave,
+               they may do so as long as they notify their coach/chaperone and the
+               junior or senior competition chair. If teams are aware of a conflict
+               that may cause them to arrive late to the competition or that may
+               cause them to leave the competition early, please notify us at
+               <a class="target links" href="mailto:bioehsc@bioehs.berkeley.edu">bioehsc@bioehs.berkeley.edu</a>.
+            </p>
+         </div>
+      </div>
+    <script type="text/javascript">
+         $(document).ready(function () {
+           $('#sidebarCollapse').on('click', function () {
+             $('#sidebar').toggleClass('active');
+             $(this).toggleClass('active');
+           });
+         });
+      </script>
+   </main>
+</body>
+{% endblock %}
